@@ -1,0 +1,29 @@
+C:\Sunil\Knut\DocsNode-OfficeAdd-in\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\DocsnodeOfficeAddinWeb.dll.config
+C:\Sunil\Knut\DocsNode-OfficeAdd-in\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\DocsnodeOfficeAddinWeb.dll
+C:\Sunil\Knut\DocsNode-OfficeAdd-in\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\DocsnodeOfficeAddinWeb.pdb
+C:\Sunil\Knut\DocsNode-OfficeAdd-in\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Sunil\Knut\DocsNode-OfficeAdd-in\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Sunil\Knut\DocsNode-OfficeAdd-in\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\obj\Debug\docsnodeOfficeAddinWeb.csproj.CoreCompileInputs.cache
+C:\Sunil\Knut\DocsNode-OfficeAdd-in\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\obj\Debug\DocsnodeOfficeAddinWeb.dll
+C:\Sunil\Knut\DocsNode-OfficeAdd-in\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\obj\Debug\DocsnodeOfficeAddinWeb.pdb
+C:\Sunil\Knut\DocsNode-OfficeAdd-in\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\obj\Debug\docsnodeOfficeAddinWeb.csprojResolveAssemblyReference.cache
+C:\Darshana\DocsNode-Templates\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\DocsnodeOfficeAddinWeb.dll.config
+C:\Darshana\DocsNode-Templates\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\DocsnodeOfficeAddinWeb.dll
+C:\Darshana\DocsNode-Templates\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\DocsnodeOfficeAddinWeb.pdb
+C:\Darshana\DocsNode-Templates\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Darshana\DocsNode-Templates\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Darshana\DocsNode-Templates\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\obj\Debug\docsnodeOfficeAddinWeb.csprojAssemblyReference.cache
+C:\Darshana\DocsNode-Templates\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\obj\Debug\docsnodeOfficeAddinWeb.csproj.CoreCompileInputs.cache
+C:\Darshana\DocsNode-Templates\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\obj\Debug\docsnodeOfficeAddinWeb.csproj.CopyComplete
+C:\Darshana\DocsNode-Templates\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\obj\Debug\DocsnodeOfficeAddinWeb.dll
+C:\Darshana\DocsNode-Templates\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\obj\Debug\DocsnodeOfficeAddinWeb.pdb
+D:\Projects\DocsNode\Office Add In\Office-Word-Add-In\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\DocsnodeOfficeAddinWeb.dll.config
+D:\Projects\DocsNode\Office Add In\Office-Word-Add-In\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\DocsnodeOfficeAddinWeb.dll
+D:\Projects\DocsNode\Office Add In\Office-Word-Add-In\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\DocsnodeOfficeAddinWeb.pdb
+D:\Projects\DocsNode\Office Add In\Office-Word-Add-In\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Projects\DocsNode\Office Add In\Office-Word-Add-In\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Projects\DocsNode\Office Add In\Office-Word-Add-In\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\obj\Debug\docsnodeofficeaddinWeb.csprojAssemblyReference.cache
+D:\Projects\DocsNode\Office Add In\Office-Word-Add-In\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\obj\Debug\docsnodeofficeaddinWeb.csproj.CoreCompileInputs.cache
+D:\Projects\DocsNode\Office Add In\Office-Word-Add-In\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\obj\Debug\docsnodeofficeaddinWeb.csproj.CopyComplete
+D:\Projects\DocsNode\Office Add In\Office-Word-Add-In\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\obj\Debug\DocsnodeOfficeAddinWeb.dll
+D:\Projects\DocsNode\Office Add In\Office-Word-Add-In\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\obj\Debug\DocsnodeOfficeAddinWeb.pdb

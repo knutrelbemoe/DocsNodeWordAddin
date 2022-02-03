@@ -1,0 +1,323 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>Word Add-In with Commands Sample</title>
+    <link href="Styles/TemplateChooserHome.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/bootstrap.css" rel="stylesheet" />
+    <link href="Styles/font-awesome.css" rel="stylesheet" />
+    <link href="Styles/DocsNodeChooserStyle.css" rel="stylesheet" />
+    <!-- For the Office UI Fabric, go to https://aka.ms/office-ui-fabric to learn more. -->
+    <link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/2.1.0/fabric.min.css">
+    <link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/2.1.0/fabric.components.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/9.6.1/css/fabric.min.css">
+    <link rel="stylesheet" href="https://mwf-service.akamaized.net/mwf/css/bundle/1.55.0/west-european/default/mwf-main.min.css">
+    <link rel="stylesheet" href="https://cdn.graph.office.net/prod/css/msgraph-portal20181212.css">
+    <script src="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-js/1.4.0/js/fabric.min.js"></script>
+</head>
+<body>
+    <div class="col-md-4">
+        <div class="row">
+            <div class="share-tab temSidebarMian" id="mainContent">
+                <div class="SidebarHeader">
+                    <div class="TemSideIcon">
+                        <img src="Images/circle.png" />
+                    </div>
+                    <div class="RightMoreBtn">
+                        <button><i class="ms-Icon ms-Icon--MoreVertical" aria-hidden="true"></i></button>
+                    </div>
+                </div>
+
+                <div class="temSlidebarBody">
+                    <div class="ManageTabsMain" style="padding:15px;">
+                        <ul class="tabList">
+                            <li class="clickme"><a href="javascript:void();" data-tag="one" class="activelink"><i class="ms-Icon ms-Icon--Tab" aria-hidden="true"></i><span>Templates</span></a></li>
+                            <li class="clickme"><a class="tmpRedirect1" href="javascript:void();" data-tag="two"><i class="ms-Icon ms-Icon--TextDocument" aria-hidden="true"></i><span>Text Snippet</span></a></li>
+                            <li class="clickme"><a class="tmpRedirect2" href="javascript:void();" data-tag="three"><i class="ms-Icon ms-Icon--FileImage" aria-hidden="true"></i><span>Corporate Image</span></a></li>
+                            <li class="clickme"><a class="tmpRedirect3" href="javascript:void();" data-tag="four"><i class="ms-Icon ms-Icon--FileImage" aria-hidden="true"></i><span>External Image</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="WaitDialog" class="hidden" style="text-align: center">
+                    <img src="/images/loading.gif" />
+                </div>
+
+
+                <div id="myTabContent1" class="tab-content">
+                    <div class="tab-pane active in" id="c-shareddrive">
+                        <div class="sharedrive-sec">
+                            <div class="top-btnsearch-part">
+                                <div class="input-group search-bar">
+                                    <input id="txtTemplateSearch" type="text" class="form-control" aria-label="..." placeholder="Search Templates">
+                                    <span class="input-group-btn">
+                                        <button class="txtfldrefbtn" type="button" id="refreshList" title="Refresh">
+                                            <img src="https://d30y9cdsu7xlg0.cloudfront.net/png/4985-200.png" />
+                                        </button>
+                                    </span>
+                                </div>
+                                <div class="ms-OverflowSet-item">
+                                    <div class="Viewbtn" id="ViewButton">
+                                        <button id="viewbtndropdown" type="button" role="menuitem" name="All Documents" title="Open the view options menu" class="ms-Button ms-Button--commandBar ms-CommandBarItem-link" data-is-focusable="true" aria-label="View options. List view and All Documents selected ." aria-expanded="false" aria-haspopup="true">
+                                            <i data-icon-name="List" class="ms-Icon ms-Icon--List" role="presentation" aria-hidden="true"></i>
+                                        </button>
+                                        <ul class="filterableClass-view" id="ViewUL"></ul>
+                                    </div>
+                                    <div class="fltbtn" id="filterButton">
+                                        <button class="filterBtn" type="button" id="btndropdown" title="Filter">
+                                            <i data-icon-name="List" class="ms-Icon ms-Icon--Filter" role="presentation" aria-hidden="true"></i>
+                                        </button>
+                                        <ul class="filterableClass-filter" id="filterUL"></ul>
+                                    </div>
+                                </div>
+                                <!--<div class="Viewbtn" id="ViewButton">
+                                    <button class="viewtempdropbtn" type="button" id="viewbtndropdown" title="View"></button>
+                                    <ul class="filterableClass-view" id="ViewUL"></ul>
+                                </div>
+                                <div class="fltbtn" id="filterButton">
+                                    <button class="filterBtn" type="button" id="btndropdown" title="Filter"></button>
+                                    <ul class="filterableClass-filter" id="filterUL"></ul>
+                                </div>
+                                <div class="boxbtn" id="boxButton">
+                                    <button class="toggleDocListViewBtn" type="button" id="toggleTemplateView" title="Box"></button>
+                                </div>-->
+                            </div>
+                            <div class="list-item-sec">
+                                <div class="doc-tempbox">
+                                    <!--<div class="brand">
+                                        <h4>List Of Document Template</h4>
+                                    </div>-->
+                                    <div id="boxscroll">
+                                        <ul id="listOfTemplate" class="list-group mb0"></ul>
+                                        <ul id="DocTemplatesBoxView" class="boxOfTemplate"></ul>
+                                        <label class="alert" id="noDataFoundLbl" style="display:none">Search Template is not available!</label>
+                                    </div>
+                                </div>
+                                <div>
+                                    <!--class="doctempbox-btmbtn"-->
+                                    <button class="custmbtn_preview" type="button" id="previewbtn">
+                                        <i class="ms-Icon ms-Icon--Preview" title="Preview" aria-hidden="true"></i>
+                                        Preview
+                                    </button>
+                                    <button class="custmbtn_preview" type="button" id="nextbtn">
+                                        Next
+                                        <i class="ms-Icon ms-Icon--PageRight" title="PageRight" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!--<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Up Coming</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            Coming soon.....
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>-->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sharedrivesec" id="preview_step">
+                    <div class="closebutton" id="closebutton"></div>
+                    <div class="customModalClass">
+                        <div class="previewpopup">
+                            <img src="" id="preview-frame" />
+                            <ul id="previewInfo" class="previewlist"></ul>
+                            <button class="custmbtn_preview2" type="button" id="nextbtn2">
+                                Next
+                                <i class="ms-Icon ms-Icon--PageRight" title="PageRight" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="new_default_page">
+                    <div class="default_page_grp">
+                        <label id="No_Default_Items">No Default Destination</label>
+                        <div class="sitecoll_group">
+                            <div class="sitecoll_item" id="siteCollectionID">
+                            </div>
+                            <div class="subsitecoll_item" id="sunsiteCollectionID">
+                            </div>
+                            <div class="doclib_item" id="documentID">
+                            </div>
+                            <div class="folder_item" id="folderID">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="default_btn_grp">
+                        <div>
+                            <button class="custmbtn_default_btn" type="button" id="defaultPreviousbtn">
+                                <i class="ms-Icon ms-Icon--PageLeft" title="PageLeft" aria-hidden="true"></i>
+                                Previous
+                            </button>
+                            <button class="custmbtn_default_btn" type="button" id="defaultCreatebtn">
+                                <i class="ms-Icon ms-Icon--FileTemplate" title="FileTemplate" aria-hidden="true"></i>
+                                Create
+                            </button>
+                            <button class="custmbtn_skip_btn" type="button" id="skipbtn">
+                                Select
+                                <i class="ms-Icon ms-Icon--Forward" title="Forward" aria-hidden="true"></i>
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="lib-section">
+                    <!--<b>Tenant URL:</b>
+                    <p>
+                        <div id="lblTenantName"><label class="form-control" id="lblTenantUrl"></label></div>
+                    </p>-->
+                    <div class="dropdown-box">
+                        <div class="dropdown-item">
+                            <div><b>Site Collection URL:</b></div>
+                            <img src="images/sp-icon.png" class="select-word-img">
+                            <select id="SPSiteCollections" class="selectpicker temp-btn">
+                                <option value="0">Select</option>
+                            </select>
+                            <!--<button type="button" title="Load More" class="loadbtn" id="loadmore"><i class="ms-Icon ms-Icon--More" aria-hidden="true"></i></button>-->
+                            <i title="Load More" id="loadmore" class="ms-Icon ms-Icon--More" aria-hidden="true"></i>
+                        </div>
+                        <div class="dropdown-item">
+                            <div><b>SubSite URL:</b></div>
+                            <img src="images/sp-icon.png" class="select-word-img">
+                            <select id="SPSubsites" class="selectpicker temp-btn">
+                                <option siteHierarchy="0" value="0">Select</option>
+                            </select>
+                        </div>
+                        <div class="dropdown-item">
+                            <div><b>Document Library URL:</b></div>
+                            <img src="images/library-icon.png" class="select-word-img">
+                            <select id="SPLibraryList" class="selectpicker temp-btn">
+                                <option value="0">Select</option>
+                            </select>
+                        </div>
+                        <div class="dropdown-item">
+                            <div><b>Folder URL:</b></div>
+                            <img src="images/folder-icon.png" class="select-word-img">
+                            <select id="SPDocFolders" class="selectpicker temp-btn">
+                                <option value="0">Select</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <!--class="drop-btm-btn"-->
+                        <button class="custmbtn_preview" type="button" id="previous">
+                            <i class="ms-Icon ms-Icon--PageLeft" title="PageLeft" aria-hidden="true"></i>
+                            Previous
+                        </button>
+                        <button class="custmbtn_preview" type="button" id="createFile">
+                            <i class="ms-Icon ms-Icon--FileTemplate" title="FileTemplate" aria-hidden="true"></i>
+                            Create <!--<i class="ms-Icon ms-Icon--PageRight" title="PageRight" aria-hidden="true"></i>-->
+                        </button>
+                    </div>
+                </div>
+                <div class="sharedrivesec" id="third_step">
+                    <h4>Create The Document</h4>
+                    <p class="alert-msg">File Already Exist!!</p>
+                    <div class="ms_Dialog_subText">
+                        <div class='Contentss'></div>
+                        <div><p class='Contentss'><b>Enter the new File name without Extension</b></p></div>
+                        <p id="alertMessage">Please Enter Valid Document Name.</p>
+                    </div>
+                    <input type="text" id='txtNewFileName' class="newfiletxt" maxLength="100" />
+                    <div id="page" class="modalDialogText"></div>
+                    <div class="ms_Dialog_actions">
+                        <button class="btnDialog" type="button" id='popupsave'>
+                            Save
+                            <!--<i class="ms-Icon ms-Icon--FileTemplate" title="FileTemplate" aria-hidden="true"></i>-->
+                        </button>
+                        <button class="btnDialog" type="button" id="popupnext">
+                            Next
+                            <!--<i class="ms-Icon ms-Icon--ChevronRight" title="ChevronRight" aria-hidden="true"></i>-->
+                        </button>
+                    </div>
+                    <div id="DocumentUrls" class="savedDocuments">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="Scripts/jquery-1.9.1.js" type="text/javascript"></script>
+
+    <script src="Scripts/FabricUI/MessageBanner.js" type="text/javascript"></script>
+    <script src="Scripts/Custom/DocsNodeUtility.js" type="text/javascript"></script>
+    <script src="Scripts/Custom/dialogFunctions.js" type="text/javascript"></script>
+    <script src="Scripts/Custom/DocsnodeJs.js" type="text/javascript"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <script src="Scripts/jquery.nicescroll.min.js"></script>
+    <!--<script src="https://appsforoffice.microsoft.com/lib/1.1/hosted/office.js" type="text/javascript"></script>-->
+    <script src="//secure.aadcdn.microsoftonline-p.com/lib/1.0.13/js/adal.min.js"></script>
+
+
+    <script type="text/javascript">
+        var sharePointTenantName;
+        (function (window, $) {
+            // Azure AD App Manifest - Set 'oauth2AllowImplicitFlow' property to 'true' ("oauth2AllowImplicitFlow": true)
+            // https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-application-manifest
+            window.accessToken = null;
+            sharePointTenantName = localStorage.Sharepoint;
+            var appRedirectURL = "https://docsnodewordtemplafyprod.azurewebsites.net/TemplateChooserHome.html";//knut prod
+            // var appRedirectURL = "https://docsnodeofficewordaddin.azurewebsites.net/TemplateChooserHome.html";//knut devlp
+            //var appRedirectURL = "https://docsnodeexcel.azurewebsites.net/TemplateChooserHome.html";//knut devlp 2
+            //var appRedirectURL = "https://localhost:44335/TemplateChooserHome.html";//local Development
+
+            var config = window.config = {
+                //tenant: sharePointTenantName + '.onmicrosoft.com',
+                clientId: localStorage.getItem('Auth0ClientID'),
+                redirectUri: appRedirectURL,
+                postLogoutRedirectUri: window.location.origin,
+                endpoints: {
+                    graphApiUrl: 'https://graph.microsoft.com',
+                    sharePointUrl: 'https://' + sharePointTenantName + '.sharepoint.com'
+                },
+                cacheLocation: 'sessionStorage'
+            };
+            var authContext = new AuthenticationContext(config);
+            $.getAuthContext = authContext;
+            var $userDisplay = $(".app-user");
+            var isCallback = authContext.isCallback(window.location.hash);
+            authContext.handleWindowCallback();
+            var user = authContext.getCachedUser();
+            if (user) {
+                $userDisplay.html(user.userName);
+                $userDisplay.show();
+            }
+            else {
+                authContext.login();
+                $userDisplay.empty();
+                $userDisplay.hide();
+            }
+            //createHTML();
+
+            $(".tmpRedirect1").click(function () {
+                localStorage.setItem("active", 2);
+                window.location.replace("https://docsnodewordtemplafyprod.azurewebsites.net/Templates.html");
+            });
+
+            $(".tmpRedirect2").click(function () {
+                localStorage.setItem("active", 3);
+                window.location.replace("https://docsnodewordtemplafyprod.azurewebsites.net/Templates.html");
+            });
+
+            $(".tmpRedirect3").click(function () {
+                localStorage.setItem("active", 4);
+                window.location.replace("https://docsnodewordtemplafyprod.azurewebsites.net/Templates.html");
+            });
+
+        })(window, window.jQuery);
+    </script>
+</body>
+</html>

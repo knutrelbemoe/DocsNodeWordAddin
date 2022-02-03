@@ -1,0 +1,11 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/docsnodeofficeaddin/DocsnodeOfficeAddinWeb/obj/Release/Package/PackageTmp
+/docsnodeofficeaddin/DocsnodeOfficeAddinWeb/Properties/PublishProfiles/word-addin-test-nexcon - FTP.pubxml
+/docsnodeofficeaddin/DocsnodeOfficeAddinWeb/Properties/PublishProfiles/word-addin-test-nexcon - Web Deploy.pubxml.user
+/docsnodeofficeaddin/DocsnodeOfficeAddinWeb/Properties/PublishProfiles/word-addin-test-nexcon - Web Deploy.pubxml
+/docsnodeofficeaddin/DocsnodeOfficeAddinWeb/Properties/PublishProfiles/word-addin-test-nexcon - ReadOnly - FTP.pubxml.user
+/docsnodeofficeaddin/DocsnodeOfficeAddinWeb/Properties/PublishProfiles/word-addin-test-nexcon - ReadOnly - FTP.pubxml
+/docsnodeofficeaddin/DocsnodeOfficeAddinWeb/Properties/PublishProfiles/word-addin-test-nexcon - FTP.pubxml.user

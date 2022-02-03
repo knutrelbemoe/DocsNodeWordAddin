@@ -1,0 +1,98 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{67095A0B-93D3-49C7-941B-1366D80E20EE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DocsnodeOfficeAddin</RootNamespace>
+    <AssemblyName>DocsnodeOfficeAddin</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetOfficeVersion>15.0</TargetOfficeVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <IncludeAssemblyInPackage>False</IncludeAssemblyInPackage>
+    <AppFeaturePartId>{3b6ca4bd-5977-4471-b4fb-0e30c7cd6246}</AppFeaturePartId>
+    <WspPartId>{7c179e1a-3ab6-42df-a6e5-7cbe7e20960d}</WspPartId>
+    <WorkflowPartId>{dc41c370-e5a7-4591-82aa-41a8674324c5}</WorkflowPartId>
+    <CspkgPartId>{7ca3bb64-e31c-4cfc-8ff3-c779b58304eb}</CspkgPartId>
+    <SqlPackagePartId>{25812953-9936-4914-9f50-bbfcc5da49da}</SqlPackagePartId>
+    <ProjectMode>OfficeApp</ProjectMode>
+    <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
+    <MinimumOfficeToolsVersion>14.0</MinimumOfficeToolsVersion>
+    <ActivePublishProfile>docsnodetemplateswordaddin - Web Deploy2</ActivePublishProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\app.publish\OfficeAppManifests\DocsnodeOfficeAddinManifest.xml" />
+    <Content Include="obj\Debug\AppManifest.xml" />
+    <Content Include="obj\Debug\DocsnodeOfficeAddin.csproj.AppPackageFileList.txt" />
+    <Content Include="obj\Debug\DocsnodeOfficeAddin.csproj.DebugRemoteAppServiceBaseUrl.txt" />
+    <Content Include="obj\Debug\DocsnodeOfficeAddin.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\DocsnodeOfficeAddin.csproj.IsDebugging.txt" />
+    <Content Include="obj\Debug\DocsnodeOfficeAddin.csproj.IsWorkflowDebuggingEnabled.txt" />
+    <Content Include="obj\Debug\DocsnodeOfficeAddin.csproj.OwaDebugging.txt" />
+    <Content Include="obj\Debug\DocsnodeOfficeAddin.csproj.RemoteAppUrl.txt" />
+    <Content Include="obj\Debug\DocsnodeOfficeAddin.csproj.WorkflowDebuggingClientSecret.txt" />
+    <Content Include="pkgobj\Debug\AppManifest.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="bin\Debug\app.publish\docsnodeOfficeAddin.app" />
+    <None Include="bin\Debug\Document1.docx" />
+    <None Include="DocsnodeOfficeAddinManifest\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{c6ee2c52-4ea7-47b3-8d55-2bc2d99c7606}</SharePointProjectItemId>
+    </None>
+    <Content Include="DocsnodeOfficeAddinManifest\DocsnodeOfficeAddin.xml">
+      <OpcRelationship>manifest-oemanifest</OpcRelationship>
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\DocsnodeOfficeAddin.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\docsnodeOfficeAddin.csprojResolveAssemblyReference.cache" />
+    <None Include="obj\Release\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Release\DocsnodeOfficeAddin.csproj.CoreCompileInputs.cache" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DocsnodeOfficeAddinWeb\docsnodeOfficeAddinWeb.csproj">
+      <Project>{E54D3E02-0E38-4827-A4CA-F76AB59A1BA0}</Project>
+      <Name>docsnodeOfficeAddinWeb</Name>
+      <Private>True</Private>
+      <RoleType>Web</RoleType>
+      <OutputItemType>SharePointWebProjectOutput</OutputItemType>
+      <RoleName>DocsnodeOfficeAddinWeb</RoleName>
+      <ReferenceOutputAssembly>False</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\OfficeAppManifests\" />
+    <Folder Include="bin\Release\" />
+    <Folder Include="obj\Debug\TempPE\" />
+    <Folder Include="obj\Release\TempPE\" />
+    <Folder Include="pkg\Debug\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+</Project>

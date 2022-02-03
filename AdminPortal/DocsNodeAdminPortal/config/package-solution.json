@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "docs-node-admin-client-side-solution",
+    "id": "a91ef04d-bde7-4eba-bd07-7da90ff7b29e",
+    "version": "1.0.3.3",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true
+  },
+  "paths": {
+    "zippedPackage": "solution/docs-node-admin-config.sppkg"
+  }
+}

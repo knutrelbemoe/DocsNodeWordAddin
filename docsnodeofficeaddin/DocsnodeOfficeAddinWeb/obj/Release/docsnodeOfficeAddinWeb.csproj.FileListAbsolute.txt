@@ -1,0 +1,131 @@
+C:\Sunil\Knut\DocsNode-OfficeAdd-in\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\DocsnodeOfficeAddinWeb.dll.config
+C:\Sunil\Knut\DocsNode-OfficeAdd-in\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\DocsnodeOfficeAddinWeb.dll
+C:\Sunil\Knut\DocsNode-OfficeAdd-in\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\DocsnodeOfficeAddinWeb.pdb
+C:\Sunil\Knut\DocsNode-OfficeAdd-in\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Sunil\Knut\DocsNode-OfficeAdd-in\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Sunil\Knut\DocsNode-OfficeAdd-in\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\obj\Release\docsnodeOfficeAddinWeb.csprojResolveAssemblyReference.cache
+C:\Sunil\Knut\DocsNode-OfficeAdd-in\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\obj\Release\docsnodeOfficeAddinWeb.csproj.CoreCompileInputs.cache
+C:\Sunil\Knut\DocsNode-OfficeAdd-in\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\obj\Release\DocsnodeOfficeAddinWeb.dll
+C:\Sunil\Knut\DocsNode-OfficeAdd-in\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\obj\Release\DocsnodeOfficeAddinWeb.pdb
+C:\Sunil\Knut\Latest-Docs-Node\DocsNode-Templates\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\DocsnodeOfficeAddinWeb.dll.config
+C:\Sunil\Knut\Latest-Docs-Node\DocsNode-Templates\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\DocsnodeOfficeAddinWeb.dll
+C:\Sunil\Knut\Latest-Docs-Node\DocsNode-Templates\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\DocsnodeOfficeAddinWeb.pdb
+C:\Sunil\Knut\Latest-Docs-Node\DocsNode-Templates\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Sunil\Knut\Latest-Docs-Node\DocsNode-Templates\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Sunil\Knut\Latest-Docs-Node\DocsNode-Templates\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\obj\Release\docsnodeOfficeAddinWeb.csproj.CoreCompileInputs.cache
+C:\Sunil\Knut\Latest-Docs-Node\DocsNode-Templates\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\obj\Release\DocsnodeOfficeAddinWeb.dll
+C:\Sunil\Knut\Latest-Docs-Node\DocsNode-Templates\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\obj\Release\DocsnodeOfficeAddinWeb.pdb
+C:\Darshana\DocsNode-Templates\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\DocsnodeOfficeAddinWeb.dll.config
+C:\Darshana\DocsNode-Templates\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\DocsnodeOfficeAddinWeb.dll
+C:\Darshana\DocsNode-Templates\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\DocsnodeOfficeAddinWeb.pdb
+C:\Darshana\DocsNode-Templates\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Darshana\DocsNode-Templates\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Darshana\DocsNode-Templates\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\obj\Release\docsnodeOfficeAddinWeb.csprojAssemblyReference.cache
+C:\Darshana\DocsNode-Templates\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\obj\Release\docsnodeOfficeAddinWeb.csproj.CoreCompileInputs.cache
+C:\Darshana\DocsNode-Templates\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\obj\Release\docsnodeOfficeAddinWeb.csproj.CopyComplete
+C:\Darshana\DocsNode-Templates\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\obj\Release\DocsnodeOfficeAddinWeb.dll
+C:\Darshana\DocsNode-Templates\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\obj\Release\DocsnodeOfficeAddinWeb.pdb
+C:\Sunil\Knut\Latest-Docs-Node\DocsNode-Templates\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\obj\Release\docsnodeOfficeAddinWeb.csprojResolveAssemblyReference.cache
+C:\yash\DocsNode-Templates_Word_Addin\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\DocsnodeOfficeAddinWeb.dll.config
+C:\yash\DocsNode-Templates_Word_Addin\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\DocsnodeOfficeAddinWeb.dll
+C:\yash\DocsNode-Templates_Word_Addin\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\DocsnodeOfficeAddinWeb.pdb
+C:\yash\DocsNode-Templates_Word_Addin\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\yash\DocsNode-Templates_Word_Addin\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\yash\DocsNode-Templates_Word_Addin\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\obj\Release\docsnodeOfficeAddinWeb.csprojResolveAssemblyReference.cache
+C:\yash\DocsNode-Templates_Word_Addin\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\obj\Release\docsnodeOfficeAddinWeb.csproj.CoreCompileInputs.cache
+C:\yash\DocsNode-Templates_Word_Addin\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\obj\Release\DocsnodeOfficeAddinWeb.dll
+C:\yash\DocsNode-Templates_Word_Addin\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\obj\Release\DocsnodeOfficeAddinWeb.pdb
+C:\yash\DocsNode-Templates_DocsNodeTemplateWordAddIn_Latest\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\DocsnodeOfficeAddinWeb.dll.config
+C:\yash\DocsNode-Templates_DocsNodeTemplateWordAddIn_Latest\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\DocsnodeOfficeAddinWeb.dll
+C:\yash\DocsNode-Templates_DocsNodeTemplateWordAddIn_Latest\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\DocsnodeOfficeAddinWeb.pdb
+C:\yash\DocsNode-Templates_DocsNodeTemplateWordAddIn_Latest\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\yash\DocsNode-Templates_DocsNodeTemplateWordAddIn_Latest\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\yash\DocsNode-Templates_DocsNodeTemplateWordAddIn_Latest\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\obj\Release\docsnodeOfficeAddinWeb.csprojResolveAssemblyReference.cache
+C:\yash\DocsNode-Templates_DocsNodeTemplateWordAddIn_Latest\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\obj\Release\docsnodeOfficeAddinWeb.csproj.CoreCompileInputs.cache
+C:\yash\DocsNode-Templates_DocsNodeTemplateWordAddIn_Latest\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\obj\Release\DocsnodeOfficeAddinWeb.dll
+C:\yash\DocsNode-Templates_DocsNodeTemplateWordAddIn_Latest\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\obj\Release\DocsnodeOfficeAddinWeb.pdb
+C:\yash\DocsNode-Templates_AdminPanel_WorddAddIn_TextSnippet\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\DocsnodeOfficeAddinWeb.dll.config
+C:\yash\DocsNode-Templates_AdminPanel_WorddAddIn_TextSnippet\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\DocsnodeOfficeAddinWeb.dll
+C:\yash\DocsNode-Templates_AdminPanel_WorddAddIn_TextSnippet\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\DocsnodeOfficeAddinWeb.pdb
+C:\yash\DocsNode-Templates_AdminPanel_WorddAddIn_TextSnippet\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\yash\DocsNode-Templates_AdminPanel_WorddAddIn_TextSnippet\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\yash\DocsNode-Templates_AdminPanel_WorddAddIn_TextSnippet\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\obj\Release\docsnodeOfficeAddinWeb.csprojResolveAssemblyReference.cache
+C:\yash\DocsNode-Templates_AdminPanel_WorddAddIn_TextSnippet\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\obj\Release\docsnodeOfficeAddinWeb.csproj.CoreCompileInputs.cache
+C:\yash\DocsNode-Templates_AdminPanel_WorddAddIn_TextSnippet\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\obj\Release\DocsnodeOfficeAddinWeb.dll
+C:\yash\DocsNode-Templates_AdminPanel_WorddAddIn_TextSnippet\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\obj\Release\DocsnodeOfficeAddinWeb.pdb
+C:\Chandrika\DocsNode-Templates\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\DocsnodeOfficeAddinWeb.dll.config
+C:\Chandrika\DocsNode-Templates\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\DocsnodeOfficeAddinWeb.dll
+C:\Chandrika\DocsNode-Templates\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\DocsnodeOfficeAddinWeb.pdb
+C:\Chandrika\DocsNode-Templates\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Chandrika\DocsNode-Templates\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Chandrika\DocsNode-Templates\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\obj\Release\docsnodeOfficeAddinWeb.csprojResolveAssemblyReference.cache
+C:\Chandrika\DocsNode-Templates\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\obj\Release\docsnodeOfficeAddinWeb.csproj.CoreCompileInputs.cache
+C:\Chandrika\DocsNode-Templates\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\obj\Release\DocsnodeOfficeAddinWeb.dll
+C:\Chandrika\DocsNode-Templates\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\obj\Release\DocsnodeOfficeAddinWeb.pdb
+C:\yash\DocsNode-Templates_AdminPanel_WorddAddIn_TextSnippet_TreeView\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\DocsnodeOfficeAddinWeb.dll.config
+C:\yash\DocsNode-Templates_AdminPanel_WorddAddIn_TextSnippet_TreeView\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\DocsnodeOfficeAddinWeb.dll
+C:\yash\DocsNode-Templates_AdminPanel_WorddAddIn_TextSnippet_TreeView\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\DocsnodeOfficeAddinWeb.pdb
+C:\yash\DocsNode-Templates_AdminPanel_WorddAddIn_TextSnippet_TreeView\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\yash\DocsNode-Templates_AdminPanel_WorddAddIn_TextSnippet_TreeView\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\yash\DocsNode-Templates_AdminPanel_WorddAddIn_TextSnippet_TreeView\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\obj\Release\docsnodeOfficeAddinWeb.csprojResolveAssemblyReference.cache
+C:\yash\DocsNode-Templates_AdminPanel_WorddAddIn_TextSnippet_TreeView\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\obj\Release\docsnodeOfficeAddinWeb.csproj.CoreCompileInputs.cache
+C:\yash\DocsNode-Templates_AdminPanel_WorddAddIn_TextSnippet_TreeView\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\obj\Release\DocsnodeOfficeAddinWeb.dll
+C:\yash\DocsNode-Templates_AdminPanel_WorddAddIn_TextSnippet_TreeView\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\obj\Release\DocsnodeOfficeAddinWeb.pdb
+C:\Chandrika\BR Projects\Word Addin New\DocsNode-Templates\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\DocsnodeOfficeAddinWeb.dll.config
+C:\Chandrika\BR Projects\Word Addin New\DocsNode-Templates\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\DocsnodeOfficeAddinWeb.dll
+C:\Chandrika\BR Projects\Word Addin New\DocsNode-Templates\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\DocsnodeOfficeAddinWeb.pdb
+C:\Chandrika\BR Projects\Word Addin New\DocsNode-Templates\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Chandrika\BR Projects\Word Addin New\DocsNode-Templates\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Chandrika\BR Projects\Word Addin New\DocsNode-Templates\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\obj\Release\docsnodeOfficeAddinWeb.csprojResolveAssemblyReference.cache
+C:\Chandrika\BR Projects\Word Addin New\DocsNode-Templates\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\obj\Release\docsnodeOfficeAddinWeb.csproj.CoreCompileInputs.cache
+C:\Chandrika\BR Projects\Word Addin New\DocsNode-Templates\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\obj\Release\DocsnodeOfficeAddinWeb.dll
+C:\Chandrika\BR Projects\Word Addin New\DocsNode-Templates\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\obj\Release\DocsnodeOfficeAddinWeb.pdb
+C:\yash\DocsNode-Templates_Word_Performance_Branch\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\DocsnodeOfficeAddinWeb.dll.config
+C:\yash\DocsNode-Templates_Word_Performance_Branch\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\DocsnodeOfficeAddinWeb.dll
+C:\yash\DocsNode-Templates_Word_Performance_Branch\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\DocsnodeOfficeAddinWeb.pdb
+C:\yash\DocsNode-Templates_Word_Performance_Branch\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\yash\DocsNode-Templates_Word_Performance_Branch\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\yash\DocsNode-Templates_Word_Performance_Branch\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\obj\Release\docsnodeOfficeAddinWeb.csprojResolveAssemblyReference.cache
+C:\yash\DocsNode-Templates_Word_Performance_Branch\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\obj\Release\docsnodeOfficeAddinWeb.csproj.CoreCompileInputs.cache
+C:\yash\DocsNode-Templates_Word_Performance_Branch\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\obj\Release\DocsnodeOfficeAddinWeb.dll
+C:\yash\DocsNode-Templates_Word_Performance_Branch\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\obj\Release\DocsnodeOfficeAddinWeb.pdb
+C:\Vaibhav\BR Projects\DocsNode\DocsNode-Templates2\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\DocsnodeOfficeAddinWeb.dll.config
+C:\Vaibhav\BR Projects\DocsNode\DocsNode-Templates2\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\DocsnodeOfficeAddinWeb.dll
+C:\Vaibhav\BR Projects\DocsNode\DocsNode-Templates2\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\DocsnodeOfficeAddinWeb.pdb
+C:\Vaibhav\BR Projects\DocsNode\DocsNode-Templates2\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Vaibhav\BR Projects\DocsNode\DocsNode-Templates2\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Vaibhav\BR Projects\DocsNode\DocsNode-Templates2\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\obj\Release\docsnodeOfficeAddinWeb.csprojAssemblyReference.cache
+C:\Vaibhav\BR Projects\DocsNode\DocsNode-Templates2\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\obj\Release\docsnodeOfficeAddinWeb.csproj.CoreCompileInputs.cache
+C:\Vaibhav\BR Projects\DocsNode\DocsNode-Templates2\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\obj\Release\docsnodeOfficeAddinWeb.csproj.CopyComplete
+C:\Vaibhav\BR Projects\DocsNode\DocsNode-Templates2\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\obj\Release\DocsnodeOfficeAddinWeb.dll
+C:\Vaibhav\BR Projects\DocsNode\DocsNode-Templates2\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\obj\Release\DocsnodeOfficeAddinWeb.pdb
+D:\Projects\DocsNode\Office Add In\Office-Word-Add-In\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\DocsnodeOfficeAddinWeb.dll.config
+D:\Projects\DocsNode\Office Add In\Office-Word-Add-In\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\DocsnodeOfficeAddinWeb.dll
+D:\Projects\DocsNode\Office Add In\Office-Word-Add-In\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\DocsnodeOfficeAddinWeb.pdb
+D:\Projects\DocsNode\Office Add In\Office-Word-Add-In\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Projects\DocsNode\Office Add In\Office-Word-Add-In\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Projects\DocsNode\Office Add In\Office-Word-Add-In\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\obj\Release\docsnodeOfficeAddinWeb.csprojAssemblyReference.cache
+D:\Projects\DocsNode\Office Add In\Office-Word-Add-In\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\obj\Release\docsnodeOfficeAddinWeb.csproj.CoreCompileInputs.cache
+D:\Projects\DocsNode\Office Add In\Office-Word-Add-In\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\obj\Release\docsnodeOfficeAddinWeb.csproj.CopyComplete
+D:\Projects\DocsNode\Office Add In\Office-Word-Add-In\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\obj\Release\DocsnodeOfficeAddinWeb.dll
+D:\Projects\DocsNode\Office Add In\Office-Word-Add-In\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\obj\Release\DocsnodeOfficeAddinWeb.pdb
+E:\Projects\OfficeAddin\office-word-add-in\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\DocsnodeOfficeAddinWeb.dll.config
+E:\Projects\OfficeAddin\office-word-add-in\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\DocsnodeOfficeAddinWeb.dll
+E:\Projects\OfficeAddin\office-word-add-in\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\DocsnodeOfficeAddinWeb.pdb
+E:\Projects\OfficeAddin\office-word-add-in\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Projects\OfficeAddin\office-word-add-in\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Projects\OfficeAddin\office-word-add-in\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\obj\Release\docsnodeOfficeAddinWeb.csprojAssemblyReference.cache
+E:\Projects\OfficeAddin\office-word-add-in\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\obj\Release\docsnodeOfficeAddinWeb.csproj.CoreCompileInputs.cache
+E:\Projects\OfficeAddin\office-word-add-in\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\obj\Release\docsnodeOfficeAddinWeb.csproj.CopyComplete
+E:\Projects\OfficeAddin\office-word-add-in\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\obj\Release\DocsnodeOfficeAddinWeb.dll
+E:\Projects\OfficeAddin\office-word-add-in\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\obj\Release\DocsnodeOfficeAddinWeb.pdb
+D:\Projects\OfficeAddin\office-word-add-in\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\DocsnodeOfficeAddinWeb.dll.config
+D:\Projects\OfficeAddin\office-word-add-in\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\DocsnodeOfficeAddinWeb.dll
+D:\Projects\OfficeAddin\office-word-add-in\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\DocsnodeOfficeAddinWeb.pdb
+D:\Projects\OfficeAddin\office-word-add-in\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Projects\OfficeAddin\office-word-add-in\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Projects\OfficeAddin\office-word-add-in\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\obj\Release\docsnodeOfficeAddinWeb.csprojAssemblyReference.cache
+D:\Projects\OfficeAddin\office-word-add-in\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\obj\Release\docsnodeOfficeAddinWeb.csproj.CoreCompileInputs.cache
+D:\Projects\OfficeAddin\office-word-add-in\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\obj\Release\docsnodeOfficeAddinWeb.csproj.CopyComplete
+D:\Projects\OfficeAddin\office-word-add-in\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\obj\Release\DocsnodeOfficeAddinWeb.dll
+D:\Projects\OfficeAddin\office-word-add-in\docsnodeofficeaddin\DocsnodeOfficeAddinWeb\obj\Release\DocsnodeOfficeAddinWeb.pdb

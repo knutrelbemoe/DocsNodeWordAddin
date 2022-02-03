@@ -1,0 +1,7 @@
+False
+5bd31640-5e59-43a0-9824-7adedde3ed7b8436df78-679b-44b6-a4f9-17a2b6b24b25
+{6df7bdf8-d18c-45b4-9365-e38d4f103f98}{68f183b0-e888-4e94-a03d-5ea03f81accd}
+{24527bfa-f9eb-4385-9dfa-ea50519c1f56}
+1.0.0.0
+docsnodeOfficeAddin
+_layouts/15/

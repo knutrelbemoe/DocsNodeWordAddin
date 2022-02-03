@@ -1,0 +1,645 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>Word Add-In with Commands Sample</title>
+    <link href="Styles/TemplateChooserHome.css" rel="stylesheet" type="text/css" />
+    <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js" type="text/javascript"></script>
+    <link href="Styles/Templates.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/font-awesome.css" rel="stylesheet" />
+    <link href="Styles/DocsNodeChooserStyle.css" rel="stylesheet" />
+    <link href="Styles/style.css" rel="stylesheet" />
+    <!--Treeview css-->
+    <link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/2.1.0/fabric.min.css">
+    <link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/2.1.0/fabric.components.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet"
+          href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/9.6.1/css/fabric.min.css">
+    <link rel="stylesheet"
+          href="https://mwf-service.akamaized.net/mwf/css/bundle/1.55.0/west-european/default/mwf-main.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.4/bluebird.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
+    <script src="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-js/1.4.0/js/fabric.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/localforage/1.8.1/localforage.min.js"></script>
+    <style>
+        .clickme {
+            cursor: pointer;
+        }
+
+        .side_body_shadow {
+            padding-left: 33px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tab_sidemounted_area {
+            position: fixed;
+            -moz-transform: rotate(-90deg);
+            -ms-transform: rotate(-90deg);
+            -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+            width: 100%;
+            left: 6px;
+            -webkit-transform-origin: top left;
+            transform-origin: top left;
+            bottom: 42px;
+            display: flex;
+            border-bottom: 1px solid #ccc;
+        }
+
+            .tab_sidemounted_area > div {
+                flex-grow: 1;
+                flex-basis: 0;
+                text-align: center;
+                padding: 5px;
+                box-sizing: content-box;
+                cursor: pointer;
+                background: #f4f4f4;
+            }
+
+                .tab_sidemounted_area > div:first-child {
+                    border-right: 1px solid #ccc
+                }
+
+        .mainTabContent > div:not(.active) {
+            display: none;
+        }
+
+        /*.MainTab .main-tab-link:focus, .MainTab .main-tab-link:active {
+            background: #0078d7;
+        }*/
+        .share-tab .side_body_sec ul {
+            overflow: hidden !important;
+        }
+
+        .MainTab .main-tab-link.active,
+        .MainTab .main-tab-link:focus,
+        .MainTab .main-tab-link:active {
+            background: #04aba3 !important;
+            color: #fff;
+        }
+
+        .chkfooter {
+            margin-top: 5px;
+            float: none !important;
+            width: 100%;
+        }
+
+        #saveTextSnippetLocation {
+            font-weight: normal;
+            border: 0.5px solid #aaa;
+            padding: 2.5px 2.5px;
+            margin: 3px 0 0 0;
+            background-color: #f3f3f3;
+        }
+
+        .hidden {
+            display:none;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="col-md-4">
+        <div id="dialog" title="Basic dialog">
+        </div>
+        <div class="row">
+            <div class="temSidebarMian">
+                <div class="SidebarHeader">
+
+                    <div id="WaitDialogFirst" style="text-align: center">
+                        <div class="waitDialogOverlay"></div>
+                        <img src="/images/fabricSpinner.gif" style="height: 30px;" />
+                        <div class="wp_instruction" style="text-align: center"><b>We are setting up your templates <br /> please wait...</b></div>
+                    </div>
+
+                    <div id="WaitDialog" class="hidden" style="text-align: center">
+                        <div class="waitDialogOverlay"></div>
+                        <img src="/images/fabricSpinner.gif" style="height: 30px;" />
+                    </div>
+                    <div class="temSlidebarBody">
+                        <div class="ManageTabsMain">
+                            <iframe class="hide" id="iframeTenant" src="" width="1" height="1"></iframe>
+                            <ul class="tabList">
+                                <li class="clickme" title="Templates">
+                                    <a data-tag="zero" class="activelink">
+                                        <i class="ms-Icon ms-Icon--Tab" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                                <li class="clickme" title="Trfvext Snippet">
+                                    <a class="tmpRedirect1" data-tag="one">
+                                        <!--<i class="ms-Icon ms-Icon--TextDocument" aria-hidden="true"></i>--><img src="Images/icons/TextSnippetIcon-2.png" />
+                                    </a>
+                                </li>
+                                <li class="clickme" title="Corporate Images">
+                                    <a class="tmpRedirect2" data-tag="two">
+                                        <i class="ms-Icon ms-Icon--FileImage" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                                <li id="liPlaceHolder" class="clickme" title="Placeholder">
+                                    <a data-tag="four">
+                                        <i class="ms-Icon ms-Icon--InsertTextBox" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+
+                                <li id="liHelp" class="clickme" title="Help">
+                                    <a href="https://docsnode.document360.io/docs/howto" data-tag="five">
+                                        <i class="ms-Icon ms-Icon--Info" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="btn_left">
+                                <i id="liAddTxtSni" title="Add Text Snippet" class="hide" aria-hidden="true">
+                                    <img src="Images/add-text-icon.png" />
+                                </i>
+                                <i id="btnRefresh" class="ms-Icon ms-Icon--Refresh refresh-btn" style="display:none"
+                                   title="Refresh" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="share-tab" id="mainContent">
+
+                            <div id="myTabContent1" class="tab-content">
+                                <div class="tab-pane activetree in" id="c-shareddrive">
+                                    <div class="sharedrive-sec">
+                                        <div class="top-btnsearch-part">
+                                            <div class="input-group search-bar">
+                                                <input id="txtTemplateSearch" type="text" class="form-control"
+                                                       aria-label="..." placeholder="Search Templates">
+                                                <span class="input-group-btn">
+                                                    <button class="txtfldrefbtn" type="button" id="refreshList"
+                                                            title="Refresh">
+                                                        <img src="https://d30y9cdsu7xlg0.cloudfront.net/png/4985-200.png" />
+                                                    </button>
+                                                </span>
+                                            </div>
+                                            <div class="ms-OverflowSet-item">
+                                                <div class="Viewbtn" id="ViewButton">
+                                                    <button id="viewbtndropdown" type="button" role="menuitem"
+                                                            name="All Documents" title="Open the view options menu"
+                                                            class="ms-Button ms-Button--commandBar ms-CommandBarItem-link"
+                                                            data-is-focusable="true"
+                                                            aria-label="View options. List view and All Documents selected ."
+                                                            aria-expanded="false" aria-haspopup="true">
+                                                        <i data-icon-name="List" class="ms-Icon root-49"
+                                                           role="presentation"></i>
+                                                    </button>
+                                                    <ul class="filterableClass-view" id="ViewUL"></ul>
+                                                </div>
+                                                <div class="fltbtn" id="filterButton">
+                                                    <button class="filterBtn" type="button" id="btndropdown"
+                                                            title="Filter">
+                                                        <i data-icon-name="List" class="ms-Icon ms-Icon--Filter"
+                                                           role="presentation" aria-hidden="true"></i>
+                                                    </button>
+                                                    <ul class="filterableClass-filter" id="filterUL"></ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-item-sec">
+                                            <div class="doc-tempbox">
+                                                <div id="boxscroll">
+                                                    <ul id="listOfTemplate" class="list-group mb0" style="display:none">
+                                                    </ul>
+                                                    <ul id="DocTemplatesBoxView" class="boxOfTemplate"></ul>
+                                                    <label class="alert" id="noDataFoundLbl" style="display:none">
+                                                        Search
+                                                        Template is not available!
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="tmp-button">
+                                                <button class="custmbtn_preview" type="button" id="previewbtn">
+                                                    <i class="ms-Icon ms-Icon--Preview" title="Preview"
+                                                       aria-hidden="true"></i>
+                                                    Preview
+                                                </button>
+                                                <button class="custmbtn_preview" type="button" id="nextbtn">
+                                                    Next
+                                                    <i class="ms-Icon ms-Icon--PageRight" title="PageRight"
+                                                       aria-hidden="true"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sharedrive-sec" id="preview_step" style="position:relative">
+                                <div class="closebutton" id="closebutton"></div>
+                                <div class="customModalClass">
+                                    <div class="previewpopup">
+                                        <img src="" id="preview-frame" />
+                                        <ul id="previewInfo" class="previewlist"></ul>
+                                        <button class="custmbtn_preview2" type="button" id="nextbtn2">
+                                            Next
+                                            <i class="ms-Icon ms-Icon--PageRight" title="PageRight"
+                                               aria-hidden="true"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="lib-section" style="display:none">
+                                <!-- Start Treeview Design-->
+                                <div class="side_body_sec">
+                                    <div class="side_body_shadow ">
+                                        <div class="tab_sidemounted_area MainTab">
+                                            <div class="main-tab-link active" data-content="secondMainTab" title="My files"
+                                                 tabindex="1">All Locations</div>
+                                            <div class="main-tab-link " data-content="firstMainTab" title="Recent"
+                                                 tabindex="1">Pinned Locations</div>
+                                        </div>
+                                        <div class="mainTabContent">
+                                            <div class="mainTabItem " id="firstMainTab">
+                                                <div class="sec_pin_location sec_location">
+
+                                                    <div class="title_tab">
+                                                        <h3 class="title_h3">Pinned Locations</h3>
+                                                        <div class="SPPinnedMore">
+                                                            <div class="pinshowmore" title="Show more">
+                                                                <i class="ms-Icon ms-Icon--ChevronDown"
+                                                                   aria-hidden="true"></i>
+                                                            </div>
+                                                            <div class="pinshowless" style="display:none"
+                                                                 title="Show less">
+                                                                <i class="ms-Icon ms-Icon--ChevronUp"
+                                                                   aria-hidden="true"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="ms-Pivot ms-Pivot--tabs tabHight pin-items">
+                                                        <ul class="ms-Pivot-links">
+                                                            <li class="ms-Pivot-link is-selected" data-content="Team"
+                                                                tabindex="1">
+                                                                <i class="ms-Icon ms-Icon--TeamsLogoInverse"
+                                                                   aria-hidden="true"></i> Teams
+                                                            </li>
+                                                            <li class="ms-Pivot-link " data-content="OneDrive"
+                                                                tabindex="1">
+                                                                <i class="ms-Icon ms-Icon--OneDriveFolder16"
+                                                                   aria-hidden="true"></i> OneDrive
+                                                            </li>
+                                                            <li class="ms-Pivot-link " data-content="SharePoint"
+                                                                tabindex="1">
+                                                                <i class="ms-Icon ms-Icon--SharepointLogoInverse"
+                                                                   aria-hidden="true"></i> SharePoint
+                                                            </li>
+                                                        </ul>
+                                                        <div class="ms-Pivot-content" data-content="Team"
+                                                             style="display: none;">
+                                                            <div id="teamItems" class="pin-item-block"></div>
+                                                            <div id="teamItemsAll" class="pin-item-block"></div>
+                                                        </div>
+                                                        <div class="ms-Pivot-content" data-content="OneDrive"
+                                                             style="display: none;">
+                                                            <div id="oneDriveitem" class="pin-item-block"></div>
+                                                            <div id="oneDriveitemAll" class="pin-item-block"></div>
+                                                        </div>
+                                                        <div class="ms-Pivot-content" data-content="SharePoint"
+                                                             style="display: none;">
+                                                            <div id="sharepointitem" class="pin-item-block"></div>
+                                                            <div id="sharepointitemAll" class="pin-item-block"></div>
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div id="SPPinned" style="display:none">
+                                                    </div>
+                                                    <div id="SPPinnedAll" style="display:none">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="mainTabItem active" id="secondMainTab">
+                                                <div class="sec_sp_location sec_location">
+                                                    <div class="title_tab">
+                                                        <h3 class="title_h3">All Locations</h3>
+
+                                                        <div class="SPTreeViewMore">
+                                                            <div class="treeshowmore" title="Show more">
+                                                                <i class="ms-Icon ms-Icon--ChevronDown"
+                                                                   aria-hidden="true"></i>
+                                                            </div>
+                                                            <div class="treeshowless" style="display:none"
+                                                                 title="Show less">
+                                                                <i class="ms-Icon ms-Icon--ChevronUp"
+                                                                   aria-hidden="true"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="ms-Pivot ms-Pivot--tabs tabHight-location location-items">
+                                                        <ul class="ms-Pivot-links">
+                                                            <li class="ms-Pivot-link is-selected" data-content="Team"
+                                                                tabindex="1">
+                                                                <i class="ms-Icon ms-Icon--TeamsLogoInverse"
+                                                                   aria-hidden="true"></i> Teams
+                                                            </li>
+                                                            <li class="ms-Pivot-link " data-content="OneDrive"
+                                                                tabindex="1">
+                                                                <i class="ms-Icon ms-Icon--OneDriveFolder16"
+                                                                   aria-hidden="true"></i> OneDrive
+                                                            </li>
+                                                            <li class="ms-Pivot-link " data-content="SharePoint"
+                                                                tabindex="1">
+                                                                <i class="ms-Icon ms-Icon--SharepointLogoInverse"
+                                                                   aria-hidden="true"></i> SharePoint
+                                                            </li>
+                                                        </ul>
+                                                        <div class="ms-Pivot-content" data-content="Team"
+                                                             style="display: none;">
+                                                            <div id="teamLoc" class="msPivot-innerTab"></div>
+                                                            <div id="teamLocAll" class="msPivot-innerTab"></div>
+                                                        </div>
+                                                        <div class="ms-Pivot-content" data-content="OneDrive"
+                                                             style="display: none;">
+                                                            <div id="oneDriveLoc" class="msPivot-innerTab"></div>
+                                                            <div id="oneDriveLocAll" class="msPivot-innerTab"></div>
+                                                        </div>
+                                                        <div class="ms-Pivot-content" data-content="SharePoint"
+                                                             style="display: none;">
+                                                            <div id="sharepointLoc" class="msPivot-innerTab"></div>
+                                                            <div id="sharepointLocAll" class="msPivot-innerTab"></div>
+                                                        </div>
+                                                    </div>
+
+
+                                                    <script type="text/javascript">
+                                                        var PivotElements = document.querySelectorAll(
+                                                            ".location-items,.pin-items");
+                                                        for (var i = 0; i < PivotElements.length; i++) {
+                                                            new fabric['Pivot'](PivotElements[i]);
+                                                        }
+                                                    </script>
+
+                                                    <div class="categoriesTree" id="SPFavTreeView">
+                                                    </div>
+                                                    <div class="categoriesTree" id="SPAllTreeView">
+                                                        <div class="categoriesTree" id="SPTreeView">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                    <!-- End Treeview Design-->
+                                    <div class="chkfooter">
+                                        <div>
+                                            <input type="checkbox" id="pinnedcheckbox" name="pincheckbox"
+                                                   value="chkFav" /><span> Mark this location as pin location.</span>
+                                        </div>
+                                        <button class="custmbtn_preview" type="button" id="previous">
+                                            <i class="ms-Icon ms-Icon--PageLeft" title="PageLeft"
+                                               aria-hidden="true"></i>
+                                            Previous
+                                        </button>
+                                        <button class="custmbtn_preview" type="button" id="createFile">
+                                            <i class="ms-Icon ms-Icon--FileTemplate" title="FileTemplate"
+                                               aria-hidden="true"></i>
+                                            Create
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sharedrivesec" id="third_step">
+                                <h4>Create The Document</h4>
+                                <p class="alert-msg">File Already Exist!!</p>
+                                <p class="permissionalert-msg">
+                                    Access denied. You do not have permission to perform this
+                                    action or access this resource.
+                                </p>
+                                <div class="ms_Dialog_subText">
+                                    <div class='Contentss'></div>
+                                    <div>
+                                        <p class='Contentss'><b>Enter the new File name without Extension</b></p>
+                                    </div>
+                                    <p id="alertMessage">Please Enter Valid Document Name.</p>
+                                    <p id="errorMessage"></p>
+                                </div>
+                                <input type="text" id='txtNewFileName' class="newfiletxt" maxLength="100" />
+                                <div id="page" class="modalDialogText"></div>
+                                <div class="ms_Dialog_actions">
+                                    <button class="btnDialog" type="button" id='popupsave'>
+                                        Save
+                                    </button>
+                                    <button class="btnDialog" type="button" id="popupnext">
+                                        Next
+                                    </button>
+                                    <button class="btnDialog" type="button" id='btnCancel'>
+                                        Cancel
+                                    </button>
+                                </div>
+                                <div id="DocumentUrls" class="savedDocuments">
+                                </div>
+                                <div id="PinnedLocationMsg">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hide" id="ManageTabsContent">
+                            <div id="secondMainContent" style="">
+                                <div class="tabSearchBox">
+                                    <div class="tabsearch">
+                                        <div class="SideSearchicon">
+                                            <i title="Search" class="ms-Icon ms-Icon--Search" aria-hidden="true"></i>
+                                        </div>
+                                        <input type="text" name="" id="txtSearch">
+                                        <input type="hidden" id="hdnCategory" />
+                                        <input type="hidden" id="hdnCategoryName" />
+                                        <input type="hidden" id="hdnTextCategory" />
+                                        <input type="hidden" id="hdnTextCategoryName" />
+                                        <div class="SideClose" title="Cancel" id="clearSearch">
+                                            <i class="ms-Icon ms-Icon--ChromeClose" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list SideContentBox" id="one">
+                                    <div class="alert_msg hide" id="alertMsg">
+                                        <p id="waranigMsg">Please select the text for text snippet.</p>
+                                        <div class="alert_msg_close_btn">
+                                            <i class="ms-Icon ms-Icon--ChromeClose"></i>
+                                        </div>
+                                    </div>
+                                    <div id="SaveSnippetModal" class="modal">
+                                        <div class="modal-content">
+                                            <div class="add_in_ppup">
+                                                <input type="hidden" id="richTxtSnippet" />
+                                                <div class="add_ppup_title">
+                                                    <h3>Add Text Snippet</h3>
+                                                </div>
+                                                <div class="alert_msg hide" id="requiredMsg">
+                                                    <!-- <span>Please filled required fields.</span> -->
+                                                    <span>Title is mandatory and should not be duplicate</span>
+                                                    <div class="alert_msg_close_btn">
+                                                        <i class="ms-Icon ms-Icon--ChromeClose"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="add_ppup_form">
+                                                    <div class="add_input">
+                                                        <label>title: <span class="field_required">*</span></label>
+                                                        <input type="text" id="txtSniTitle" name="title">
+                                                    </div>
+                                                    <div class="add_input">
+                                                        <label>Description:</label>
+                                                        <textarea id="txtSniDescript"></textarea>
+                                                    </div>
+                                                    <!-- <div class="add_input">
+                                                        <label>Category:</label>
+                                                        <select id="txtSniCat"></select>
+                                                    </div> -->
+                                                    <div class="add_input">
+                                                        <label>Location: <span class="field_required">*</span></label>
+                                                        <div id="saveTextSnippetLocation"></div>
+                                                    </div>
+                                                </div>
+                                                <div id="spinner" class="hide" style="text-align: center">
+                                                    <img src="/images/fabricSpinner.gif" style="height: 30px;" />
+                                                </div>
+                                                <div class="add_ppup_button">
+                                                    <button type="button" class="add_ppup_btn save_btn">Save</button>
+                                                    <button type="button" class="add_ppup_btn cancel_btn">
+                                                        Cancel
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <ul id="catBreadText" class="breadcrumb hidden"></ul>
+                                    <ul class="categoryItems"></ul>
+                                    <ul class="SubDocs" id="ulCat"></ul>
+                                    <ul class="childTextCategory" style="padding-left: 0;"></ul>
+                                    <ul class="SubDocs childTextItems"></ul>
+                                </div>
+                                <div class="list SideContentBox hide" id="two">
+                                    <ul id="catBreadImage" class="breadcrumb hidden"></ul>
+                                    <ul class="categoryList" style="margin-bottom: 0 "></ul>
+                                    <ul class="categoryItems" style="margin-top:0"></ul>
+                                    <ul style="padding-left:0;" class="childCategoryList"></ul>
+                                    <ul style="margin-top: 0;padding-left: 0;" class="childCategoryItems"></ul>
+                                </div>
+                                <div class="list placeholderMain hide" id="four">
+                                    <div class="placeHolder-label-section">
+                                        <label>This feature is coming soon!!</label>
+                                    </div>
+                                    <div class="placeHolder-section hide">
+                                        <div class="libSecGroup">
+                                            <label>Select Placeholder:</label>
+                                            <select id="SPPlaceholder" class="selectpicker temp-btn">
+                                                <option value="0">--Select--</option>
+                                            </select>
+                                        </div>
+                                        <div class="libSecGroup">
+                                            <label>Set Value:</label>
+                                            <select id="SPFieldValue" class="selectpicker temp-btn">
+                                                <option value="0">--Select--</option>
+                                            </select>
+                                        </div>
+                                        <button id="btnCreatePlaceHolder" class="btn btn-default" type="button">
+                                            Insert Placeholder
+                                        </button>
+                                        <div>
+                                            <ul id="listOfPlaceHolder"></ul>
+                                        </div>
+                                        <div id="dvPlacVal" style="        position: fixed;
+        bottom: 0;
+        padding: 15px;
+        left: 0;
+        right: 0;
+        background: yellow;
+        color: red;
+        display: none;">
+                                            <label>Please select place holder and set value.</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.1.min.js"></script>
+    <script src="Scripts/FabricUI/MessageBanner.js" type="text/javascript"></script>
+    <script src="Scripts/Custom/Templates.js" type="text/javascript"></script>
+    <script src="Scripts/Custom/DocsnodeJs.js" type="text/javascript"></script>
+    <script src="https://secure.aadcdn.microsoftonline-p.com/lib/0.2.4/js/msal.js"></script>
+    <script src="Scripts/jquery.nicescroll.min.js"></script>
+    <script src="//secure.aadcdn.microsoftonline-p.com/lib/1.0.13/js/adal.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"
+            integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA=="
+            crossorigin="anonymous"></script>
+    <script src="Scripts/Custom/localStorage.js" type="text/javascript"></script>
+    <!--<script src="Scripts/slimscroll.js"></script>-->
+    <script type="text/javascript">
+        var sharePointTenantName;
+        (function (window, $) {
+            // Azure AD App Manifest - Set 'oauth2AllowImplicitFlow' property to 'true' ("oauth2AllowImplicitFlow": true)
+            // https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-application-manifest
+            sharePointTenantName = localStorage.Sharepoint;
+            var appRedirectURL = localStorage.getItem('Auth0ClientUrl') + 'TemplateChooserHome.html';
+            var config = window.config = {
+                clientId: localStorage.getItem('Auth0ClientID'),
+                redirectUri: appRedirectURL,
+                postLogoutRedirectUri: window.location.origin,
+                endpoints: {
+                    graphApiUrl: 'https://graph.microsoft.com',
+                    sharePointUrl: 'https://' + sharePointTenantName + '.sharepoint.com'
+                },
+                cacheLocation: 'sessionStorage'
+            };
+            var authContext = new AuthenticationContext(config);
+            $.getAuthContext = authContext;
+
+            var isCallback = authContext.isCallback(window.location.hash);
+            authContext.handleWindowCallback();
+            var user = authContext.getCachedUser();
+            if (!user) {
+                authContext.login();
+            }
+            var toggler = document.getElementsByClassName("caretCustom");
+            var i;
+            for (i = 0; i < toggler.length; i++) {
+                toggler[i].addEventListener("click", function () {
+                    this.parentElement.querySelector(".active").classList.toggle("nested");
+                    this.classList.toggle("caret-down");
+                });
+            }
+            localStorage.setItem('userDisplayName', user.profile.name);
+        })(window, window.jQuery);
+        $(document).ready(function () {
+
+            //    setTimeout(function () {
+            //        console.log('cntHeight', cntHeight)
+            //        $('.tab_sidemounted_area').css({ 'width': cntHeight });
+            ////        $(".ms-Pivot.ms-Pivot--tabs, #boxscroll").slimScroll({
+            ////            height: cntHeisty
+
+        });
+        $(function () {
+            $('.tab_sidemounted_area').hide();
+
+            $('.MainTab .main-tab-link').click(function () {
+                var tabWidth = $('#firstMainTab').width();
+                // Check for active
+                $('.MainTab> div').removeClass('active');
+                $(this).addClass('active');
+
+                // Display active tab
+                let currentTab = $(this).data('content');
+                console.log(currentTab)
+                $('.mainTabContent> div').hide();
+                $('#' + currentTab).addClass('active').css({ 'width': tabWidth }).show();
+
+                return false;
+            });
+        });
+    </script>
+</body>
+
+</html>

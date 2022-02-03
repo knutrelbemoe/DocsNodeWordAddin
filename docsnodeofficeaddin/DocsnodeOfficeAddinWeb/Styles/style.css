@@ -1,0 +1,554 @@
+﻿.sidebar_main {
+    float: left;
+    width: 100%;
+    height: 100%;
+}
+
+.logo {
+    text-align: center;
+}
+
+    .logo img {
+        width: auto;
+        height: 100px;
+    }
+
+.logo_header {
+    background: #000;
+    float: left;
+    width: 100%;
+    position: relative;
+}
+
+.close_btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #333;
+    border: 0;
+    padding: 10px;
+    cursor: pointer;
+}
+
+    .close_btn i {
+        color: #fff;
+    }
+
+.side_footer {
+    bottom: 0;
+    position: fixed;
+    background-color: #fff;
+    padding: 15px;
+    float: left;
+    width: 100%;
+    border-top: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+button.ftr_btn {
+    background: #00d4ca;
+    color: #fff;
+    padding: 8px;
+    width: 120px;
+    border: 0;
+    margin-right: 10px;
+    font-size: 15px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+    button.ftr_btn i {
+        margin-right: 5px;
+        font-size: 18px;
+        vertical-align: middle;
+    }
+
+.side_body_sec {
+    float: left;
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.title_tab {
+    font-size: 20px;
+    font-weight: 400;
+    color: #00d4ca;
+    display: block;
+    border-bottom: 2px solid #00d4ca;
+    margin: 0;
+    margin-bottom: 10px;
+    padding-bottom: 4px;
+    display: inline-block;
+    width: 100%;
+}
+
+    .title_tab h3 {
+        width: calc(100% - 30px);
+        float: left;
+        margin-right: 5px;
+    }
+
+.sec_location {
+    float: left;
+    width: 100%;
+    padding: 4px 2px 10px 10px;
+    box-sizing: border-box;
+    height: 100%
+}
+
+    .sec_location > .pin_location {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        float: left;
+        height: 190px !important;
+        overflow: auto !important;
+    }
+
+.pin_location li {
+    float: left;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.pindoc h4 {
+    font-size: 14px;
+    margin: 0;
+    /* float: left; */
+    font-weight: 400;
+    overflow-x: hidden;
+}
+
+.pindoc i {
+    font-size: 18px;
+    float: left;
+    margin-right: 5px;
+}
+
+.pindoc span {
+    font-size: 12px;
+    float: left;
+    width: 100%;
+    margin-top: 3px;
+    word-break:break-all;
+    white-space:normal !important;
+}
+
+.pindoc {
+    float: left;
+    width: calc(100% - 50px);
+    margin-right: 10px;
+
+}
+
+.pinicon {
+    font-size: 22px;
+    color: #00d4d3;
+    text-decoration: none;
+    float: left;
+}
+
+.side_body_shadow {
+    float: left;
+    box-shadow: 0px 0px 5px 0px rgb(0, 0, 0, 0.2);
+    height: calc(100vh - 124px);
+    overflow: auto;
+}
+
+.title_tab i {
+    font-size: 14px;
+}
+
+.SPPinnedMore {
+    float: left;
+    width: 25px;
+}
+
+.categoriesTree {
+    overflow: auto;
+}
+
+#treeviewUL,
+#treeviewUL ul {
+    list-style: none;
+}
+
+    #treeviewUL ul {
+        border-left: 1px solid #000;
+        padding-left: 30px;
+    }
+
+#treeviewUL {
+    margin: 0;
+    padding-left: 25px;
+}
+
+.pinnedselect {
+    cursor: pointer;
+}
+
+.caretCustom {
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    display: block;
+    position: relative;
+}
+
+    .caretCustom::before {
+        content: "";
+        color: #333;
+        margin-right: 6px;
+        position: absolute;
+        top: 0;
+        padding: 10px 0;
+        left: -16px;
+        display: inline-block;
+        font-family: FabricMDL2Icons;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        speak: none;
+    }
+
+.singleLineEllipse {
+    max-width: 195px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+}
+
+#treeviewUL a span {
+    vertical-align: middle;
+}
+
+.caret-down::before {
+    content: "";
+    color: #333;
+    margin-right: 6px;
+    position: absolute;
+    top: 0;
+    padding: 10px 0;
+    left: -16px;
+    display: inline-block;
+    font-family: FabricMDL2Icons;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    speak: none;
+}
+
+.active {
+    display: block;
+}
+
+.custom-pivot-links {
+    overflow: hidden !important;
+}
+.list-folder-icon {
+    color: #f4ae00 !important;
+}
+
+.chkfooter {
+    margin-top: 5px;
+    width:100%;
+}
+
+    .chkfooter input,
+    input[type="search"] {
+        -webkit-appearance: checkbox;
+        -moz-appearance: checkbox;
+        vertical-align: middle;
+        appearance: checkbox;
+    }
+
+    .chkfooter span {
+        font-size: 12px;
+        vertical-align: middle;
+    }
+
+.nested {
+    display: none;
+}
+
+.categoriesContentMain {
+    margin-top: 15px;
+    border: 1px solid #999;
+    padding: 15px;
+}
+
+#treeviewUL a i {
+    font-size: 14px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+#treeviewUL a {
+    font-size: 14px;
+    color: #333;
+    text-decoration: none;
+    padding: 7px 2px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+    #treeviewUL a:hover {
+        background-color: #eee;
+    }
+
+.treeselected {
+    background-color: #eee;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    display: block;
+    position: relative;
+}
+
+/*OVERWRITED CSS*/
+
+.share-tab .side_body_sec ul {
+    width: auto;
+    margin-top: 0;
+    height: auto;
+    overflow: auto;
+}
+
+.docimgouterbox {
+    cursor: pointer;
+}
+
+.share-tab .side_body_sec .categoriesTree ul {
+    width: 100%;
+    margin-top: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.breadcrumb-div {
+    color: #fff;
+    background: #04aba3;
+    padding: 0.55%;
+}
+
+.breadcrumb-span {
+    font-size: 1.15em;
+    line-height: 20px;
+    vertical-align: middle;
+}
+
+    .breadcrumb-span i {
+        vertical-align: middle;
+        line-height: 20px;
+    }
+
+    .breadcrumb-span:hover {
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+.ui-dialog-titlebar {
+    background: #04aba3 !important;
+    color: #fff !important;
+}
+
+#dialog {
+    display: none;
+    text-align: center !important;
+    min-height: 50px !important;
+}
+
+.ms-Icon--ChevronRightMed {
+    font-size: 0.75em !important;
+}
+
+#listOfTemplate ul {
+    margin-top: 1em;
+}
+
+#listOfTemplate li {
+    cursor: pointer;
+    color: #000;
+}
+
+#listOfTemplate .ms-Icon--FabricFolderFill {
+    /* color: #f4ae00; */
+    padding: 0 0.25%;
+}
+
+.toggle-check {
+    position: fixed !important;
+    top: 1em !important;
+    right: 1em !important;
+}
+
+.toggle-check-field {
+    width: 31px !important;
+    border: 2.5px solid #9c9c9c !important;
+    border-radius: 36px;
+}
+
+.box-default-location + .toggle-check-field:active,
+.box-default-location:checked + .toggle-check-field,
+.list-default-location + .toggle-check-field:active,
+.list-default-location:checked + .toggle-check-field {
+    background: #04aba3 !important;
+}
+
+.box-default-location + .toggle-check-field:before,
+.list-default-location + .toggle-check-field:before {
+    background-color: #9c9c9c !important;
+    border-right: 2.5px solid #9c9c9c !important;
+    border-radius: 36px;
+}
+
+.anchor-button {
+    background-color: #fcfcfc;
+    border-radius: 2px;
+    color: #000;
+    padding: 4px 12px;
+    text-decoration: none;
+    border-color: aliceblue;
+    border: 1px solid #a0a0a0;
+    margin: 0 2px 0 0;
+    font-weight: 400;
+}
+
+    .anchor-button:hover {
+        background-color: #04aba3;
+        color: #fff;
+    }
+
+.saved-file-list {
+    font-size: 14px;
+    margin-top: 0.5em;
+}
+
+.ms-Pivot.ms-Pivot--tabs .ms-Pivot-link.is-selected {
+    background-color: #04aba3 !important;
+}
+
+.ms-Pivot-link {
+    font-size: 12px !important;
+}
+
+.title_tab h3 {
+    font-size: 16px !important;
+}
+
+.ms-Pivot.ms-Pivot--tabs .ms-Pivot-link {
+    height: 28px !important;
+    line-height: 28px !important;
+}
+
+.removepinned {
+    cursor: pointer;
+}
+
+.pin-item-block {
+    /*max-height: 195px;*/
+    overflow-y: auto;
+}
+
+
+
+/*.msPivot-innerTab {
+    overflow-y: auto;
+    max-height: 280px;
+}*/
+
+#teamviewUl,
+.treefolderUl {
+    margin: 0;
+    padding-left: 25px;
+}
+
+    #teamviewUl > li > span,
+    .treefolderUl > li > span {
+        /* padding: 5px; */
+    }
+
+    #teamviewUl ul {
+        overflow: hidden !important;
+        border-left: 1px solid #000;
+        padding-left: 30px;
+        list-style: none;
+    }
+
+    #teamviewUl a {
+        font-size: 14px;
+        color: #333;
+        text-decoration: none;
+        padding: 7px 2px;
+        display: block;
+        transition: background-color 0.3s ease;
+    }
+
+        #teamviewUl a i {
+            font-size: 14px;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+
+        #teamviewUl a span {
+            vertical-align: middle;
+        }
+
+.toggle-check {
+    display: none !important;
+}
+
+.checkboxToggler {
+    padding: 5px;
+}
+
+    .checkboxToggler .styleCheck {
+        font-size: 30px;
+        color: #41af86;
+        position: absolute;
+        left: 50%;
+        top: 41px;
+        display: none;
+        width: auto;
+        transform: translate(-50%, -50%);
+    }
+
+    .checkboxToggler > input[type="checkbox"] {
+        display: none !important;
+    }
+
+    .checkboxToggler input:checked:hover ~ label > .styleCheck,
+    .checkboxToggler input:checked ~ label > .styleCheck {
+        display: inline-block;
+    }
+
+    .checkboxToggler > label {
+        width: 100%;
+        cursor: pointer;
+    }
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+.clearfix {
+    display: inline-block;
+}
+
+.mainTabContent, .mainTabItem {
+    height: calc(100vh - 155px);
+}
+
+.ms-Pivot.ms-Pivot--tabs {
+    height: 94% !important;
+}

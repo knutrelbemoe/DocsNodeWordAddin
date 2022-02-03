@@ -1,0 +1,2 @@
+bin\Debug\app.publish\OfficeAppManifests\DocsnodeOfficeAddinManifest.xml
+C:\Darshana\DocsNode-Templates\docsnodeofficeaddin\DocsnodeOfficeAddin\bin\Debug\app.publish\docsnodeOfficeAddin.app

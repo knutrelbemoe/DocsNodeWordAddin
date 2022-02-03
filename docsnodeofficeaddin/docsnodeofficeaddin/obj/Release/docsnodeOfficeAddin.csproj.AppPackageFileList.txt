@@ -1,0 +1,2 @@
+bin\Release\app.publish\OfficeAppManifests\DocsnodeOfficeAddinManifest.xml
+D:\Projects\OfficeAddin\office-word-add-in\docsnodeofficeaddin\DocsnodeOfficeAddin\bin\Release\app.publish\docsnodeOfficeAddin.app

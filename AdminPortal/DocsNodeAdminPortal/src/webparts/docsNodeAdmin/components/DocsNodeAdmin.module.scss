@@ -1,0 +1,872 @@
+@import '~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss';
+$themePrimary: '[theme:themePrimary, default:#0078d7]';
+.docsNodeAdmin {
+  .container {
+    //max-width: 700px;
+    margin: 0px auto;
+    max-width: 1170px;	
+	  padding: 0 15px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  .row {
+    @include ms-Grid-row;
+    @include ms-fontColor-white;
+    background-color: $ms-color-themeDark;
+    padding: 20px;
+  }
+
+  .column {
+    @include ms-Grid-col;
+    @include ms-lg10;
+    @include ms-xl8;
+    @include ms-xlPush2;
+    @include ms-lgPush1;
+  }
+
+  .title {
+    @include ms-font-xl;
+    @include ms-fontColor-white;
+  }
+
+  .subTitle {
+    @include ms-font-l;
+    @include ms-fontColor-white;
+  }
+
+  .description {
+    @include ms-font-l;
+    @include ms-fontColor-white;
+  }
+
+  .button {
+    // Our button
+    text-decoration: none;
+    height: 32px;
+
+    // Primary Button
+    min-width: 80px;
+    background-color: $ms-color-themePrimary;
+    border-color: $ms-color-themePrimary;
+    color: $ms-color-white;
+
+    // Basic Button
+    outline: transparent;
+    position: relative;
+    font-family: "Segoe UI WestEuropean","Segoe UI",-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: $ms-font-size-m;
+    font-weight: $ms-font-weight-regular;
+    border-width: 0;
+    text-align: center;
+    cursor: pointer;
+    display: inline-block;
+    padding: 0 16px;
+
+    .label {
+      font-weight: $ms-font-weight-semibold;
+      font-size: $ms-font-size-m;
+      height: 32px;
+      line-height: 32px;
+      margin: 0 4px;
+      vertical-align: top;
+      display: inline-block;
+    }
+  }
+}
+
+.topNav {
+  display: inline-block;
+  width: 100%;
+  padding: 5px 0;
+  border-bottom: 1px solid #999;
+} 
+.ProductIcon{
+	float: left;
+}
+.ProductIcon img{
+	width: 60px;
+}
+.productName{
+	float: left;
+	margin: 15px 0 15px 15px;
+}
+.productName span{
+	font-size: 24px;
+    font-weight: 600;
+    line-height: 24px;
+}
+.leftNav ul{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	border: 1px solid #999;
+}
+.leftNav{
+	width: calc(25% - 15px);
+    float: left;
+    margin-top: 20px;
+    margin-right: 15px;
+}
+.rightContent{
+	width: 75%;
+    float: left;
+    margin-top: 20px;
+}
+.manageAssets li{	
+	//padding: 10px;
+    display: block;
+    text-decoration: none;
+    border-bottom: 1px solid #999;
+    cursor: pointer;
+}
+.manageAssets li:last-child{
+	border: 0;
+}
+.manageAssets li i{
+	font-size: 16px;
+    vertical-align: middle;
+    margin-right: 5px;    
+}
+
+section{	    
+    display: inline-block;
+    width: 100%;
+}
+.TitleH3{
+	margin-bottom: 10px;
+	margin-top: 0;
+    font-size: 22px;
+    font-weight: normal;
+}
+.TitleH3:before{
+	content: '';
+    width: 5px;
+    height: 24px;
+    background-color: #1bd7cf;
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+.manageAssets {
+	margin-bottom: 15px;
+}
+.ribbonTop ul{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.ribbonTop ul li{
+	display: inline-block;
+	margin: 0 10px;
+}
+.ribbonTop ul li a{
+	color: #333;
+	text-decoration: none;
+}
+
+.ribbonTop{
+	border-bottom: 1px solid ;
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+.slidesManageMain {
+	margin: 15px 0;
+}
+.addNew select{
+	width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    
+}
+button.addNew {
+	position: relative;
+	    background: transparent;
+    border: 0;
+        padding: 0;
+}
+.searchBoxMain{
+	position: relative;
+}
+.searchBoxMain i.ms-Icon--Search{
+	position: absolute;
+    font-size: 16px;
+    padding: 9px;
+}
+.searchBoxMain{
+	position: relative;
+}
+.searchBoxMain input{
+	    max-width: 100%;
+    height: 30px;
+    padding: 0 41px;
+        width: 80%;
+}
+.selectBox select{
+	    max-width: 100%;
+    height: 34px;
+}
+.addNewBtn{
+  flex: 0 15%;
+  display: flex;
+    align-items: stretch;
+    height: 32px;
+}
+.searchBox{
+	flex: 0 85%;
+}
+.shortBy{
+	flex: 0 28%;
+}
+.shortBy label{
+  float: left;
+  margin-left: 10px;
+  margin-right: 5px;
+}
+.slidesManageMain table{
+	width: 100%;
+	border: 1px solid #999;
+	text-align: left;
+}
+.slidesManageMain td a {
+	    color: #333;
+    text-decoration: none;
+}
+.slidesManageMain button{
+	    cursor: pointer;
+    background: transparent;
+    border: 0;
+    padding: 0;
+}
+.slidesManageMain button:focus{
+	outline:0 ;
+}
+.slidesManageMain td{
+	padding: 10px;
+}
+.slidesManageMain th{
+	padding:15px 10px;
+}
+.slidesManageMain table tr:nth-child(2n){
+	background-color: #fff;
+}
+.slidesManageMain td:first-child i{
+	font-size: 18px;	
+}
+
+
+/*******************CSS OF CHECKBOX***********************/
+
+.control {
+  display: inline-block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  font-size: 18px;
+}
+.control input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.control__indicator {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background: #e6e6e6;
+}
+.control--radio .control__indicator {
+  border-radius: 50%;
+}
+.control:hover input ~ .control__indicator,
+.control input:focus ~ .control__indicator {
+  background: #ccc;
+}
+.control input:checked ~ .control__indicator {
+  background:#62d7cf;
+}
+.control:hover input:not([disabled]):checked ~ .control__indicator,
+.control input:checked:focus ~ .control__indicator {
+  background: #03b3a7;
+}
+.control input:disabled ~ .control__indicator {
+  background: #e6e6e6;
+  opacity: 0.6;
+  pointer-events: none;
+}
+.control__indicator:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+.control input:checked ~ .control__indicator:after {
+  display: block;
+}
+.control--checkbox .control__indicator:after {
+  left: 8px;
+  top: 4px;
+  width: 3px;
+  height: 8px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.control--checkbox input:disabled ~ .control__indicator:after {
+  border-color: #7b7b7b;
+}
+
+/*******************END CSS OF CHECKBOX***********************/
+
+
+button.footerDeleteBtn{
+	background: #62d7cf;
+    padding: 10px 30px;
+    color: #fff;
+    font-weight: 700;
+}
+.slidesManageMainFooterBtn{
+	margin-top: 15px;
+}
+.fileIconHeaderIcon {
+  padding: 0;
+  font-size: 14px;
+  padding-left: 0px !important;
+}
+.fileIconCell{
+  text-align: center; 
+  display: inline-block;
+  vertical-align: 'middle';
+  height: 100%;
+  width: 0px;    
+}
+.fileIconImg{
+  vertical-align: 'middle';
+  width: 20px;
+  height: 20px;
+}
+
+span[class^="ms-DetailsHeader-cellName"]
+{
+  text-overflow: unset !important;
+  cursor: pointer;
+}
+.DocumentView{
+  float: left;
+  margin: 10px;
+  width: 210px;
+  border: 1px solid;
+}
+
+button.footerDeleteBtn{
+	background: #62d7cf;
+    padding: 10px 30px;
+    color: #fff;
+    font-weight: 700;
+}
+.slidesManageMainFooterBtn{
+	margin-top: 15px;
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #fff;
+  overflow-x: hidden;
+  transition: 0.5s;
+ 	box-shadow: 0px 0px 20px 0px #eee;
+}
+
+.sidenav .closebtn {
+    font-size: 16px;
+    line-height: 1;
+    float: right;
+    padding: 15px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+.titleSidenav h3{
+	font-size: 22px;
+    font-weight: normal;
+    margin:0;
+}
+.headerSidenav{ 
+        display: inline-block;
+    width: 100%;
+}
+.titleSidenav{
+	display: inline-block;
+    width: calc(100% - 65px);
+    padding-left: 15px;
+}
+.headerSidenav ul{
+	list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    width: calc(100% - 65px);
+}
+.headerSidenav ul li{
+	display: inline-block;
+}
+.headerSidenav ul a{
+	color: #333;
+	text-decoration: none;
+	padding: 15px;
+    display: inline-block;
+    transition: all 0.3s;
+}
+.headerSidenav ul a:hover{
+	    background: #f2f2f2;
+}
+.headerSidenav ul a i{
+	font-size: 18px;
+}
+.bodySidenav{
+	    padding: 15px 25px;
+}
+.titleBodySidenav h3{
+	font-size: 24px;
+    font-weight: normal;
+    margin: 15px 0 30px;
+}
+.NewIteamForm label{
+	    display: inline-block;
+    font-weight: 600;
+    margin-bottom: 8px;
+        //width: calc(100% - 40px);
+}
+.NewIteamForm input, .NewIteamForm select{
+	    ///width: 100%;
+   // height: 33px;    
+    padding: 0 15px;
+}
+ .NewIteamForm textarea{
+ 	height: 100px;
+ 	width: 100%;    
+    padding: 15px;
+ }
+.NewIteamForm input:hover, .NewIteamForm textarea:hover, .NewIteamForm select:hover{
+	outline: 0;	
+}
+.NewIteamForm input:focus, .NewIteamForm textarea:focus, .NewIteamForm select:focus{
+	outline: 0;
+}
+.chooseFile input{
+	width: 100%;
+padding: 0px;
+margin-bottom: 30px;
+height: 30px;
+}
+.FormInput{
+	margin-bottom: 30px;
+}
+.FormInput button{
+	background: transparent;
+    border: 0;
+    padding: 5px;
+    float: right;
+    cursor: pointer;
+}
+.FormInput button:focus{
+	outline: 0;
+}
+.formBtn {
+	font-weight: 600;
+    border: 0;
+    padding: 8px 20px;
+    border-radius: 2px;
+    cursor: pointer;
+    margin-right: 8px;
+}
+.SaveBtn{
+	background: #62d7cf;
+    color: #fff;
+}
+.modal,
+.modal-box {
+  z-index: 900;
+}
+
+.modal-sandbox {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: transparent;
+}
+
+.modal {
+  display: none; 
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgb(0,0,0);
+  background: rgba(0,0,0,.8);
+  overflow: auto;
+}
+
+.modal-box {
+  position: relative;
+  width: 80%;
+  max-width: 70%;
+  margin: 100px auto;
+  background-color: #fff;
+      padding: 30px;
+  animation-duration: .4s;
+  animation-timing-function: cubic-bezier(0,0,.3,1.6);
+}
+
+/* Close Button */
+.close-modal {
+      cursor: pointer;
+    float: right;
+}
+.modal-body iframe{
+	width: 100%;
+}
+.footerbtn{
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.drpdwnConfig{
+  
+    width: 100%;
+    margin-bottom: 10px;
+    width: calc(66.66% - 15px);
+    float: left;
+}
+
+.drpdwnConfigMain{
+	flex: 0 28%;
+}
+.drpdwnConfigMain label{
+  float: left;
+  margin-left: 10px;
+  margin-right: 5px;
+  width: 33.33%;
+}
+
+.columnPointer{
+  cursor: pointer;
+}
+
+.placeholder_maindiv{width: 100%; float: left;margin: 0; padding: 0;height: 100%;
+  overflow: auto;}
+.placeholder_maindiv > li{width: 100%; float: left; display: block; /*margin: 0 0 5.1vh ;*/    margin-top: calc((100vh - 660px) / 4);}
+
+.fabricplaceholderdrpdwnOption{ height: 36px; width: 100%; float: left}
+
+.customCommonDivClass{
+  margin: 10px 0;
+  display: inline-block;
+  width: 100%;
+}
+.customCommonDivClass label{
+  font-size: 18px; font-weight: 600;margin-bottom: 10px;
+}
+
+div[class^="commentsWrapper_"] {
+  display: none;
+}
+.chooseFileMc{
+  display: inline-block;
+  width: 100%;
+}
+.chooseFileMc > div > div > div{
+  height: auto;
+  width: 100%;
+  border: 0;
+  float: left;
+}
+.chooseFileMc  > div > div > div > input{
+  padding: 0;
+}
+.optionalInput{
+  display: inline-block;
+}
+.mc_saveBtn{  
+  margin-top: 10px;
+}
+.imgDivClass{
+  float: left;
+}
+.imgText{
+  width: calc(66.66% - 15px);
+    float: right;
+}
+.FormInput div[class^="ql-active"] div[class^="ql-toolbar"] {
+  position: relative!important;
+  top: 1px !important;
+}
+.richText{
+  border: 1px solid #ccc !important;
+}
+//TreeView Style
+body{
+	display: inline-block;
+	width: 100%;
+	margin: 0;
+	max-width: 100%;
+	font-size: 14px;
+	font-family: "Segoe UI Web (West European)",Segoe UI,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+    font-weight: normal;
+}
+.sidebar_main{
+	float: left;
+    width: 100%;
+    height: 100%;
+}
+.logo{
+	text-align: center;
+}
+.logo img{
+	width: auto;
+	height: 100px;
+}
+.logo_header{
+	background: #000;
+	float: left;
+	width: 100%;
+	position: relative;
+}
+.close_btn{
+	position: absolute;
+    top: 0;
+    right: 0;
+    background: #333;
+    border: 0;
+    padding: 10px;
+    cursor: pointer;
+}
+.close_btn i{
+	color: #fff;
+}
+.side_footer{
+    bottom: 0;
+    position: fixed;
+    background-color: #fff;
+    padding: 15px;
+    float: left;
+    width: 100%;
+    border-top: 1px solid #ddd;
+    box-sizing: border-box;
+}
+button.ftr_btn {
+    background: #00D4CA;
+    color: #fff;
+    padding: 8px;
+    width: 120px;
+    border: 0;
+    margin-right: 10px;
+    font-size: 15px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+button.ftr_btn i{
+	margin-right: 5px;
+	font-size: 18px;
+    vertical-align: middle;
+}
+.side_body_sec {
+    float: left;
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    height: calc(100vh - 170px);
+    overflow: auto;
+}
+h3.title_h3{
+	font-size: 22px;
+    color: #00d4ca;
+    display: block;
+    border-bottom: 2px solid #00d4ca;
+    margin: 0;
+    margin-bottom: 10px;
+    padding-bottom: 4px;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #fff;
+}
+.sec_location{
+	    float: left;
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+}
+.pin_location{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	float: left;
+    height: 200px;
+    overflow: auto;
+    width: 100%;
+}
+.pin_location li{
+	    float: left;
+    width: 100%;
+    padding: 10px 0;
+}
+.pindoc h4{
+	font-size: 18px;
+    margin: 0;
+    float: left;
+}
+.pindoc i{
+	font-size: 18px;
+    float: left;
+    margin-right: 5px;
+}
+.pindoc span{
+	font-size: 14px;
+    float: left;
+    width: 100%;
+    margin-top: 3px;
+}
+.pindoc{
+	float: left;
+    width: calc(100% - 50px);
+    margin-right: 10px;
+}
+.pinicon{
+	    font-size: 30px;
+    color: #00d4d3;
+    text-decoration: none;
+    float: left;
+}
+.pinicon i{
+	font-size: 26px;
+}
+.side_body_shadow{
+	float: left;
+    box-shadow: 0px 0px 5px 0px rgb(0,0,0);
+}
+.categoriesTree{
+    overflow: auto;
+    width: 100%;
+}
+.categoriesTree ul{
+    list-style: none;
+    margin: 0;
+    padding-left: 35px;
+}
+.categoriesTree ul ul{
+    border-left: 1px solid #000;
+}
+.caret {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: block;
+  position: relative;
+}
+
+.PinLocationCheckBox{
+    float: left;
+    margin-right: 6px;
+}
+
+.caret::before {
+  content: "";
+  color: #333;
+    margin-right: 6px;
+    position: absolute;
+    top: 0;
+    padding: 10px 0;
+    left: -25px;
+    display: inline-block;
+    font-family: FabricMDL2Icons;
+    font-style: normal;
+    font-weight: 400;
+    speak: none;
+}
+
+.caret-down::before {
+    content: "";
+    color: #333;
+      margin-right: 6px;
+      position: absolute;
+      top: 0;
+      padding: 10px 0;
+      left: -25px;
+      display: inline-block;
+      font-family: FabricMDL2Icons;
+      font-style: normal;
+      font-weight: 400;
+      speak: none;
+  }
+
+
+
+.treeselected{
+    background-color: #eee;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    display: block;
+    position: relative;
+}
+.pintreeselected{
+    cursor: pointer;
+}
+
+.fieldCaret{
+    display: block;
+    cursor: pointer;
+}
+
+.active {
+    display: block;
+  }
+  .nested {
+    display: none;
+  }
+  .footerRatio
+  {
+    float: left;
+    width: 100%;
+  }
+.categoriesContentMain{
+      margin-top: 15px;
+    border: 1px solid #999;
+    padding: 15px;
+}
+.categoriesTree ul a i{
+  font-size: 18px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+.categoriesTree ul a{
+    color:$themePrimary;
+    text-decoration: none;
+    padding: 7px 10px;
+    display:block;
+    transition: background-color 0.3s ease;
+}
+.categoriesTree ul a:hover{
+  background-color: #eee;
+}
+
+//TreeView Style Ends
+

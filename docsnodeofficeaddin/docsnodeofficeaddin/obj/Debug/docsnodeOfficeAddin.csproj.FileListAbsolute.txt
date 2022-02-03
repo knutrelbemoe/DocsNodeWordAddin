@@ -1,0 +1,4 @@
+C:\Sunil\Knut\DocsNode-OfficeAdd-in\docsnodeofficeaddin\DocsnodeOfficeAddin\obj\Debug\docsnodeOfficeAddin.csproj.CoreCompileInputs.cache
+C:\Sunil\Knut\DocsNode-OfficeAdd-in\docsnodeofficeaddin\DocsnodeOfficeAddin\obj\Debug\docsnodeOfficeAddin.csprojResolveAssemblyReference.cache
+C:\Darshana\DocsNode-Templates\docsnodeofficeaddin\DocsnodeOfficeAddin\obj\Debug\docsnodeOfficeAddin.csproj.CoreCompileInputs.cache
+C:\Darshana\DocsNode-Templates\docsnodeofficeaddin\DocsnodeOfficeAddin\obj\Debug\docsnodeOfficeAddin.csprojAssemblyReference.cache

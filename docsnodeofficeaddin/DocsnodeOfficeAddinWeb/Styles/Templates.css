@@ -1,0 +1,241 @@
+﻿/* Page-specific styling */
+
+html {
+    position: relative;
+    min-height: 100%;
+    overflow:hidden;
+}
+
+body {
+    margin: 0 0 0px; /* bottom = footer height */
+}
+
+.footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 40px;
+    width: 100%;
+}
+
+.padding {
+    padding: 15px;
+}
+
+#notification-popup.ms-MessageBanner {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    text-align: left;
+    height: inherit;
+    min-width: inherit;
+}
+
+#notification-popup .ms-MessageBanner-text {
+    margin: 0;
+    padding: 18px 15px;
+    min-width: inherit;
+}
+
+.SideContentBox li.liIteamImg {
+    width: 50%;
+    float: left;
+}
+.liInnerImage img{
+    max-width:100%;
+}
+.liInnerImage {
+    width: 100%;
+    height: 100px;
+    position: relative;
+    overflow: hidden;
+}
+
+    .liInnerImage img {
+        width: 100%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+.width { max-width: 400px; }
+
+body { background-color: #ddd; font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif; }
+
+* { box-sizing: border-box; }
+
+/****REQUIRE CSS START HERE*****/
+.RightMoreBtn { float: right; padding-top: 6px; width: 25px; text-align: right; }
+
+    .RightMoreBtn button { background: transparent; border: 0; font-size: 18px; cursor: pointer; padding: 0; }
+
+.TemSideIcon { float: left; padding-left: 15px; width: 50px; }
+
+    .TemSideIcon img { width: 30px; }
+
+.SidebarHeader { /*padding: 10px 0;*/ display: inline-block; width: 100%;/* border-bottom: 1px solid #d0cdcd;*/ }
+
+.temSidebarMian { background-color: #fff; /*border: 1px solid #999;*/ display: inline-block; width: calc(100% - 2px); }
+
+.active { display: block; }
+
+.hide { display: none; }
+
+.ManageTabsMain ul { text-align: right; list-style: none; padding: 0; margin: 0; float: left; /*width: calc(100% - 75px);*/ }
+
+.libSecGroup label { font-size: 14px; }
+
+.libSecGroup { display: inline-block; width: 100%; margin-bottom: 20px; }
+
+.placeHolder-section > button { background: #04aba3; color: #fff; border: 0; padding: 10px 20px; font-size: 12px; cursor: pointer; }
+
+.tabList li { width: 40px; display: inline-block; }
+
+.categoryItems { padding: 0; margin-bottom: 0; display: inline-block; clear: both; width: 100%; }
+
+.categoryList { padding: 0; }
+
+.tabList li i, .tabList li span { display: block; }
+
+.tabList li span { font-size: 11px; margin-top: 8px; }
+
+.tabList li i { font-size: 20px; }
+
+.tabList li img {
+    margin-bottom: 0px;
+    height: 22px;
+    vertical-align: baseline;
+}
+
+.tabList li a {
+    color: #333;
+    text-decoration: none;
+    text-align: center;
+    border: 1px solid transparent;
+    display: block;
+    padding: 6px;
+    height: 34px;
+}
+
+ .tabList li a.activelink { border-color: #1CACEB; }
+
+.ManageTabsMain { padding: 7px; margin-bottom: 33px; }
+
+.tabsearch input { width: 100%; height: 30px; display: inline-block; border: 1px solid #ddd; padding: 0 30px; }
+
+    .tabsearch input:focus { outline: 0; }
+
+.tabsearch { position: relative; }
+
+.tabSearchBox { display: inline-block; width: 100%; }
+
+.SideSearchicon { position: absolute; top: 0; left: 0; }
+
+.SideClose { position: absolute; right: 0; top: 0; cursor: pointer; }
+
+.tabsearch i { padding: 9px; font-size: 14px; }
+
+#ManageTabsContent { display: none; width: 100%; margin-top: 12px; padding: 0 8px; }
+
+.SideContentBox { border: 1px solid #ddd; border-top: 0; /*padding: 20px;*/ overflow: auto; height: calc(100vh - 85px); }
+
+    .SideContentBox li a:hover { background-color: #f2f2f2; }
+
+.file-icon { float: left; margin-right: 15px; font-size: 18px; }
+
+.fileName { float: left; font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 200px; }
+
+.fileEnter-icon { float: right; }
+
+.SideContentBox li { display: inline-block; width: 100%; /*margin: 10px 0;*/ }
+
+    .SideContentBox li a { color: #333; display: inline-block; width: 100%; text-decoration: none; padding: 5px; }
+
+.SubDocs li h3 { margin: 0; font-size: 16px; font-weight: normal; }
+
+.SubDocs li p { margin: 0; font-size: 14px; }
+
+.SubScontent { display: inline-block; width: calc(100% - 60px); margin-left: 10px; vertical-align: middle; }
+
+.SubSicon { display: inline-block; vertical-align: middle; font-size: 24px; }
+
+.ManageTabsMain ul.SubDocs { margin-top: 15px; }
+
+.SubDocs i { color: #62d7cf; }
+
+.SubDocs { margin: 0; padding: 0; }
+
+.clickme { cursor: pointer; }
+
+ul.breadcrumb { padding: 0; margin: 0; }
+
+.breadcrumb li { float: left; width: auto; }
+
+    .breadcrumb li a { width: auto; padding: 0; /*margin: 0 10px;*/ }
+
+        .breadcrumb li a i { margin: 0; font-size: 12px; margin-top: 4px; float: left; font-weight: bold; }
+
+.btn_left { float: right; }
+.breadcrumb label[class^="ms-Breadcrumb-itemLink"] { /* display: inline !important;*/ float: left; max-width: 100px !important; }
+.btn_left i { padding: 6px; font-size: 20px; cursor: pointer; line-height: 1; vertical-align: middle; }
+input[type=text]::-ms-clear { display: none; /* This sets the cross color as red. */ /* The cross can be hidden by setting the display attribute as "none" */ }
+.add_in_ppup { display: inline-block; width: 100%; box-sizing: border-box; }
+.add_ppup_title { background-color: #05aca5; padding: 30px; text-align: center; }
+    .add_ppup_title h3 { font-size: 24px; font-weight: 400; margin: 0; color: #fff; }
+.add_ppup_form { padding: 15px; box-sizing: border-box; display: inline-block; width: 100%; }
+.add_input label { display: block; text-transform: capitalize; font-size: 14px; font-weight: 600; margin-bottom: 5px; }
+.add_input input, .add_input textarea, .add_input select { display: block; width: 100%; padding: 5px; border: 1px solid #aaa; }
+    .add_input input:focus, .add_input textarea:focus, .add_input select:focus { outline: 0; }
+.field_required { color: red; }
+.add_input textarea { height: 70px; }
+.add_input { margin-bottom: 20px; }
+.add_ppup_button { padding: 15px; text-align: right; display: inline-block; width: 100%; box-sizing: border-box; }
+button.add_ppup_btn { width: 80px; font-size: 14px; font-weight: 600; padding: 8px; border: 0; cursor: pointer; }
+.add_ppup_button button:focus { outline: 0; }
+button.save_btn { background: #05aca5; color: #fff; margin-right: 5px; }
+button.cancel_btn { background: #aaa; color: #fff; }
+/* The Modal (background) */
+.modal { display: none; /* Hidden by default */ position: fixed; /* Stay in place */ z-index: 1; /* Sit on top */ padding-top: 20px; /* Location of the box */ left: 0; top: 0; width: 100%; /* Full width */ height: 100%; /* Full height */ overflow: auto; /* Enable scroll if needed */ background-color: rgb(0,0,0); /* Fallback color */ background-color: rgba(0,0,0,0.4); /* Black w/ opacity */ }
+
+/* Modal Content */
+.modal-content { margin: auto; border: 0; width: 90%; background-color: #fff; }
+.alert_msg { width: 100%; background-color: yellow; padding: 5px; display:inline-block;}
+    .alert_msg p { font-size: 14px; color: red; width: calc(100% - 40px); float: left; }
+.alert_msg_close_btn { cursor: pointer; font-size: 10px; float: right; padding: 5px; color: red; }
+
+.placeHolder-section { border: 1px solid #ddd; padding: 15px 10px; width: 100%; height: calc(100vh - 52px); }
+.placeHolder-label-section {
+    border: 1px solid #ddd;
+    padding: 15px 10px;
+    width: 100%;
+    height: calc(100vh - 52px);
+}
+    .placeHolder-section .selectpicker { width: 100%; border: 1px solid #ddd; height: 34px; margin-top: 5px; }
+/****REQUIRE CSS END HERE*****/
+
+/* Added by Amartya for image loading (03-Dec-2020) [Start] */
+.liItemFolder {
+    text-align: center;
+}
+
+.liItemFolder img{
+    width: 50%;
+    /* position: absolute; */
+    left: 50%;
+}
+
+.folderImage {
+    width: 20% !important;
+}
+
+.liInnerImage .text {
+    position: absolute;
+    top: 48%;
+    left: 48%;
+}
+
+.liInnerImage:hover {
+    cursor: pointer;
+}
+/* Added by Amartya for image loading (03-Dec-2020) [End] */
